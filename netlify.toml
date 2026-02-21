@@ -1,0 +1,4 @@
+[build]
+  base = "my-website"
+  publish = "."
+  command = ""
