@@ -1,0 +1,6 @@
+/ramble/*        https://blog.charlaywood.com/ramble/:splat        301
+/travel/*        https://blog.charlaywood.com/travel/:splat        301
+/passions/*      https://blog.charlaywood.com/passions/:splat      301
+/2024/*          https://blog.charlaywood.com/2024/:splat          301
+/2023/*          https://blog.charlaywood.com/2023/:splat          301
+/2022/*          https://blog.charlaywood.com/2022/:splat          301

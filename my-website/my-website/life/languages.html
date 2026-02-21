@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Languages | Charlay Wood</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../logonone.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .blog-cta {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--green-deep); color: white;
+            padding: 14px 28px; border-radius: 8px;
+            text-decoration: none; font-weight: 500; font-size: 1em;
+            margin-top: 28px; transition: background 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 16px rgba(27,67,50,0.3);
+        }
+        .blog-cta:hover { background: var(--green-accent); transform: translateY(-2px); }
+        .photo-gallery { columns: 3; column-gap: 16px; margin-top: 32px; }
+        @media (max-width: 768px) { .photo-gallery { columns: 2; } }
+        @media (max-width: 480px) { .photo-gallery { columns: 1; } }
+        .photo-item { break-inside: avoid; margin-bottom: 16px; border-radius: 10px; overflow: hidden; cursor: pointer; }
+        .photo-item img { width: 100%; display: block; transition: transform 0.3s ease; }
+        .photo-item:hover img { transform: scale(1.02); }
+        .photo-caption { font-size: 0.78em; color: var(--text-muted); font-style: italic; margin-top: 6px; padding: 0 4px; }
+        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; cursor: pointer; }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 6px; cursor: default; }
+        .lightbox-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 2em; cursor: pointer; opacity: 0.7; }
+        .lightbox-close:hover { opacity: 1; }
+        .photo-placeholder { padding: 40px; text-align: center; color: var(--text-muted); font-style: italic; background: var(--cream); border-radius: 10px; }
+    </style>
+</head>
+<body class="inner-page">
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <nav>
+        <a href="../index.html" class="nav-logo"><img src="../logowhite.png" alt="Charlay Wood" class="nav-logo-img"><span class="nav-logo-name">Charlay Wood</span></a>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../science.html">Science</a>
+            <a href="../content.html">Content</a>
+            <a href="../travel.html">Travel</a>
+            <div class="dropdown">
+                <a class="dropbtn nav-active">Life ▾</a>
+                <div class="dropdown-content"><div class="dropdown-content-inner">
+                    <a href="../life/tango.html">Argentine Tango</a>
+                    <a href="../life/football.html">Football</a>
+                    <a href="../life/languages.html"" class="nav-active">Languages</a>
+                </div></div></div>
+            <a href="https://blog.charlaywood.com/">Blog</a>
+            <a href="../index.html#connect">Connect</a>
+        </div>
+    </nav>
+
+    <div class="inner-hero">
+        <div class="inner-hero-content">
+            <p class="hero-eyebrow">Life · Languages · Curiosity</p>
+            <h1 class="inner-hero-title">Languages 🗣️</h1>
+            <p class="inner-hero-sub">An aspiring polyglot on a lifelong mission.</p>
+            <a href="https://blog.charlaywood.com/category/languages" class="blog-cta" target="_blank" rel="noopener">
+                ✍️ Follow my language learning journey on the blog ↗
+            </a>
+        </div>
+    </div>
+
+    <main id="main">
+
+
+        <section>
+            <div class="section-label">The obsession</div>
+            <h2>The obsession</h2>
+            <p>Language learning is one of those pursuits that reveals itself to be bottomless the further you go. Every language you learn opens a door not just to communication but to an entirely different way of organising thought, experience, and the world. I find that completely irresistible.</p>
+            <p>I've lived and worked in China, which gave my Mandarin a real-world grounding that no classroom could replicate. I spent time in Shanghai speaking Chinese every day — navigating a city, running a team, building relationships — and came out the other side with a deep appreciation for how much a language unlocks when you're immersed in it.</p>
+        </section>
+
+        <section class="alt-bg">
+            <div class="section-label">Current languages</div>
+            <h2>Current languages</h2>
+            <p>I'm working on Spanish (which gets daily use in Madison, a bilingual city in many respects), Mandarin (ongoing and humbling), Greek (helped enormously by multiple trips to Greece and a great deal of tsipouro-fuelled conversation), and Arabic, which I'm approaching with appropriate ambition and caution.</p>
+            <p>Each language has its own personality and its own demands. Spanish rewards consistency; Mandarin rewards patience; Greek rewards socialising; Arabic rewards stubbornness. I'm trying to cultivate all four.</p>
+        </section>
+
+        <section>
+            <div class="section-label">Languages & science</div>
+            <h2>Languages & science</h2>
+            <p>There's a connection between language learning and science that I've come to appreciate — both require holding uncertainty comfortably, building understanding incrementally, and accepting that you'll be wrong a lot before you get things right. The same curiosity that drives me into the lab drives me to a new grammar book at 11pm.</p>
+            <p>Speaking someone's language, even imperfectly, changes the quality of every interaction. It's one of the most reliable investments I know.</p>
+        </section>
+
+
+        <section class="alt-bg">
+            <div class="section-label">Photos</div>
+            <h2>Photos</h2>
+            <p>Click any photo to enlarge.</p>
+            <div class="photo-gallery">
+                <div class="photo-placeholder">
+                    Photos coming soon — drop your images into a <code>life/photos/</code> folder and add them here.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        <img src="../logowhite.png" alt="Charlay Wood" class="footer-logo-img">
+        <p>Copyright © C Wood</p>
+        <p style="font-size:12px; margin-top:5px; opacity:0.7;">No part of this website may be reproduced or distributed without prior written permission from the copyright owner.</p>
+    </footer>
+
+    <script>
+    function openLightbox(item) {
+        const img = item.querySelector('img');
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox-img').alt = img.alt;
+        document.getElementById('lightbox').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+
+</body>
+</html>
