@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peru | Travel | Charlay Wood</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" type="image/png" href="../../logonone.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .photo-gallery { columns: 3; column-gap: 16px; margin-top: 32px; }
+        @media (max-width: 768px) { .photo-gallery { columns: 2; } }
+        @media (max-width: 480px) { .photo-gallery { columns: 1; } }
+        .photo-item { break-inside: avoid; margin-bottom: 16px; border-radius: 10px; overflow: hidden; cursor: pointer; }
+        .photo-item img { width: 100%; display: block; transition: transform 0.3s ease; }
+        .photo-item:hover img { transform: scale(1.02); }
+        .photo-caption { font-size: 0.78em; color: var(--text-muted); font-style: italic; margin-top: 6px; padding: 0 4px; }
+        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; cursor: pointer; }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 6px; cursor: default; }
+        .lightbox-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 2em; cursor: pointer; opacity: 0.7; line-height: 1; }
+        .lightbox-close:hover { opacity: 1; }
+        .trip-meta { display: flex; gap: 32px; flex-wrap: wrap; margin: 16px 0 32px; padding: 20px 24px; background: var(--cream); border-radius: 10px; border: 1.5px solid rgba(141,110,99,0.15); }
+        .trip-meta-item { display: flex; flex-direction: column; gap: 2px; }
+        .trip-meta-label { font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 500; }
+        .trip-meta-value { font-size: 0.95em; color: var(--green-deep); font-weight: 500; }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--green-accent); font-size: 0.88em; text-decoration: none; margin-bottom: 8px; font-weight: 500; transition: gap 0.2s ease; }
+        .back-link:hover { gap: 10px; }
+        .trip-divider { border: none; border-top: 1.5px solid rgba(141,110,99,0.15); margin: 40px 0; }
+    </style>
+</head>
+<body class="inner-page">
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo"><img src="../../logowhite.png" alt="Charlay Wood" class="nav-logo-img"><span class="nav-logo-name">Charlay Wood</span></a>
+        <div class="nav-links">
+            <a href="../../index.html">Home</a>
+            <a href="../../index.html#about">About</a>
+            <a href="../../science.html">Science</a>
+            <a href="../../content.html">Content</a>
+            <a href="../../travel.html" class="nav-active">Travel</a>
+            <div class="dropdown">
+                <a class="dropbtn">Life ▾</a>
+                <div class="dropdown-content"><div class="dropdown-content-inner">
+                    <a href="https://blog.charlaywood.com/passions/argentine-tango-2/">Argentine Tango</a>
+                    <a href="https://blog.charlaywood.com/passions/sports/">Sports</a>
+                    <a href="https://blog.charlaywood.com/passions/languages/">Languages</a>
+                </div></div></div>
+            <a href="https://blog.charlaywood.com/ramble/">Blog</a>
+            <a href="../../index.html#connect">Connect</a>
+        </div>
+    </nav>
+
+    <div class="inner-hero">
+        <div class="inner-hero-content">
+            <p class="hero-eyebrow">Travel · South America</p>
+            <h1 class="inner-hero-title">Peru 🇵🇪</h1>
+            <p class="inner-hero-sub">Ancient empires, mountain air, and the best food on the continent.</p>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <section>
+            <a href="../../travel.html" class="back-link">← Back to Travel</a>
+
+            <div class="trip-meta">
+                <div class="trip-meta-item">
+                    <span class="trip-meta-label">When</span>
+                    <span class="trip-meta-value">December 2025</span>
+                </div>
+                <div class="trip-meta-item">
+                    <span class="trip-meta-label">Cities</span>
+                    <span class="trip-meta-value">Lima, Cusco, Machu Picchu</span>
+                </div>
+                <div class="trip-meta-item">
+                    <span class="trip-meta-label">Highlight</span>
+                    <span class="trip-meta-value">Machu Picchu at sunrise</span>
+                </div>
+                <div class="trip-meta-item">
+                    <span class="trip-meta-label">Must eat</span>
+                    <span class="trip-meta-value">Ceviche in Lima</span>
+                </div>
+            </div>
+
+            <div class="section-label">The Trip</div>
+            <h2>About This Trip</h2>
+            <p>Peru was part of a South American December that also took me to Argentina and Jamaica, and it was — somehow — the one that surprised me most. I'd had high expectations and it exceeded them anyway.</p>
+
+            <p>Lima was the entry point, and an immediately excellent one. The city has a reputation for its food that turns out to be completely deserved. Peruvian cuisine is a fascinating blend of indigenous ingredients and Japanese, Spanish, and Chinese influences — the result of waves of immigration that transformed what people cooked and ate. A good ceviche in Lima is one of those meals you find yourself thinking about for weeks afterwards: the acidity, the heat of the ají amarillo, the sweetness of the corn. I ate a lot of ceviche.</p>
+
+            <p>From Lima we flew to Cusco, which sits at over 3,400 metres above sea level and makes sure you know it. The altitude hits you — a heaviness in the chest, a slight fogginess — but it passes after a day or two, and then you're free to properly appreciate one of the most remarkable cities in the Americas. Cusco was the capital of the Inca Empire, and the Spanish colonial architecture built on top of Inca stonework creates a layered, complicated, beautiful city. The Inca stonework itself is extraordinary — massive blocks cut and fitted together without mortar with a precision that still puzzles engineers.</p>
+
+            <p>And then Machu Picchu. There are places you visit and feel slightly underwhelmed because the reality can't match the buildup, and there are places that are genuinely, breathtakingly worth it. Machu Picchu is the latter. Standing there in the mountain mist, looking at a city built in the clouds by a civilisation that had no iron tools or wheels, you feel something shift in your sense of what humans are capable of. It's one of those rare places that earns its reputation completely.</p>
+        </section>
+
+        <section class="alt-bg">
+            <div class="section-label">Photography</div>
+            <h2>Photos</h2>
+            <p>Click any photo to enlarge.</p>
+
+            <div class="photo-gallery">
+                <div style="padding: 40px; text-align: center; color: var(--text-muted); font-style: italic; background: var(--cream); border-radius: 10px;">
+                    Photos coming soon — drop your images into the <code>photos/</code> folder and add them here.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        <img src="../../logowhite.png" alt="Charlay Wood" class="footer-logo-img">
+        <p>Copyright © C Wood</p>
+        <p style="font-size:12px; margin-top:5px; opacity:0.7;">No part of this website may be reproduced or distributed without prior written permission from the copyright owner.</p>
+    </footer>
+
+    <script>
+    function openLightbox(item) {
+        const img = item.querySelector('img');
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox-img').alt = img.alt;
+        document.getElementById('lightbox').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+
+</body>
+</html>

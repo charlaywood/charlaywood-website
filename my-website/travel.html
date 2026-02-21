@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel | Charlay Wood</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logonone.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .travel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 32px;
+        }
+        @media (max-width: 600px) {
+            .travel-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        }
+        .travel-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            display: block;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+            background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+        }
+        .travel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.32);
+        }
+        /* Default state: flag centred, photo hidden */
+        .travel-card-flag-bg {
+            position: absolute; inset: 0;
+            display: flex; align-items: center; justify-content: center;
+            z-index: 2;
+            transition: opacity 0.35s ease;
+        }
+        .travel-card-flag-bg img {
+            width: 72px;
+            border-radius: 4px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+        }
+        .travel-card-photo {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.35s ease, transform 0.4s ease;
+            transform: scale(1.04);
+            z-index: 1;
+        }
+        /* Hover: show photo, hide flag */
+        .travel-card:hover .travel-card-photo {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .travel-card:hover .travel-card-flag-bg {
+            opacity: 0;
+        }
+        .travel-card-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(27,67,50,0.88) 0%, rgba(27,67,50,0.05) 55%, transparent 100%);
+            z-index: 3;
+        }
+        /* Continent badge — top left */
+        .travel-card-badge {
+            position: absolute;
+            top: 10px; left: 10px;
+            z-index: 5;
+            font-size: 0.65em;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 20px;
+        }
+        .badge-south-america { background: #FFF3E0; color: #E65100; }
+        .badge-europe        { background: #E8F4FD; color: #1565C0; }
+        .badge-caribbean     { background: #E8F5E9; color: #2E7D32; }
+        .badge-asia          { background: #F3E5F5; color: #6A1B9A; }
+        .badge-africa        { background: #FFF8E1; color: #F57F17; }
+        .badge-north-america { background: #E3F2FD; color: #0D47A1; }
+        .badge-oceania       { background: #FCE4EC; color: #880E4F; }
+        /* Country name + small flag bottom */
+        .travel-card-label {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 16px 16px 14px;
+            color: white;
+            z-index: 4;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+        .travel-card-label h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.25em; font-weight: 600;
+            margin: 0; line-height: 1.1;
+        }
+        .travel-card-label-flag img {
+            width: 24px;
+            border-radius: 2px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="inner-page">
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <nav>
+        <a href="index.html" class="nav-logo"><img src="logowhite.png" alt="Charlay Wood" class="nav-logo-img"><span class="nav-logo-name">Charlay Wood</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="science.html">Science</a>
+            <a href="content.html">Content</a>
+            <a href="travel.html" class="nav-active">Travel</a>
+            <div class="dropdown">
+                <a class="dropbtn">Life ▾</a>
+                <div class="dropdown-content"><div class="dropdown-content-inner">
+                    <a href="https://blog.charlaywood.com/passions/argentine-tango-2/">Argentine Tango</a>
+                    <a href="https://blog.charlaywood.com/passions/sports/">Sports</a>
+                    <a href="https://blog.charlaywood.com/passions/languages/">Languages</a>
+                </div></div></div>
+            <a href="https://blog.charlaywood.com/ramble/">Blog</a>
+            <a href="index.html#connect">Connect</a>
+        </div>
+    </nav>
+
+    <div class="inner-hero">
+        <div class="inner-hero-content">
+            <p class="hero-eyebrow">Places · People · Adventures</p>
+            <h1 class="inner-hero-title">Travel ✈️</h1>
+            <p class="inner-hero-sub">Exploring the world and taking my curiosity across the globe. Every journey is an education in itself.</p>
+        </div>
+    </div>
+
+    <main id="main">
+        <section>
+            <div class="section-label">Destinations</div>
+            <h2>Places I've Been</h2>
+            <p>Click any destination to see photos and stories from the trip.</p>
+
+            <div class="filter-bar" style="margin: 20px 0 8px;">
+                <button class="filter-btn active" onclick="filterTravel('all', this)">All</button>
+                <button class="filter-btn" onclick="filterTravel('south-america', this)">South America</button>
+                <button class="filter-btn" onclick="filterTravel('europe', this)">Europe</button>
+                <button class="filter-btn" onclick="filterTravel('caribbean', this)">Caribbean</button>
+                <button class="filter-btn" onclick="filterTravel('asia', this)">Asia</button>
+                <button class="filter-btn" onclick="filterTravel('africa', this)">Africa</button>
+                <button class="filter-btn" onclick="filterTravel('north-america', this)">North America</button>
+                <button class="filter-btn" onclick="filterTravel('oceania', this)">Oceania</button>
+            </div>
+
+            <div class="travel-grid" id="travel-grid">
+
+                <!-- Argentina -->
+                <a href="travel/argentina/index.html" class="travel-card" data-continent="south-america">
+                    <span class="travel-card-badge badge-south-america">South America</span>
+                    <div class="travel-card-flag-bg">
+                        <img src="https://flagcdn.com/w80/ar.png" alt="Argentina flag">
+                    </div>
+                    <img src="travel/argentina/photos/cover.jpg" alt="Argentina" class="travel-card-photo" onerror="this.style.display='none'">
+                    <div class="travel-card-overlay"></div>
+                    <div class="travel-card-label">
+                        <h3>Argentina</h3>
+                        <div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/ar.png" alt=""></div>
+                    </div>
+                </a>
+
+                <!-- Greece -->
+                <a href="travel/greece/index.html" class="travel-card" data-continent="europe">
+                    <span class="travel-card-badge badge-europe">Europe</span>
+                    <div class="travel-card-flag-bg">
+                        <img src="https://flagcdn.com/w80/gr.png" alt="Greece flag">
+                    </div>
+                    <img src="travel/greece/photos/cover.jpg" alt="Greece" class="travel-card-photo" onerror="this.style.display='none'">
+                    <div class="travel-card-overlay"></div>
+                    <div class="travel-card-label">
+                        <h3>Greece</h3>
+                        <div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/gr.png" alt=""></div>
+                    </div>
+                </a>
+
+                <!-- Jamaica -->
+                <a href="travel/jamaica/index.html" class="travel-card" data-continent="caribbean">
+                    <span class="travel-card-badge badge-caribbean">Caribbean</span>
+                    <div class="travel-card-flag-bg">
+                        <img src="https://flagcdn.com/w80/jm.png" alt="Jamaica flag">
+                    </div>
+                    <img src="travel/jamaica/photos/cover.jpg" alt="Jamaica" class="travel-card-photo" onerror="this.style.display='none'">
+                    <div class="travel-card-overlay"></div>
+                    <div class="travel-card-label">
+                        <h3>Jamaica</h3>
+                        <div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/jm.png" alt=""></div>
+                    </div>
+                </a>
+
+                <!-- Peru -->
+                <a href="travel/peru/index.html" class="travel-card" data-continent="south-america">
+                    <span class="travel-card-badge badge-south-america">South America</span>
+                    <div class="travel-card-flag-bg">
+                        <img src="https://flagcdn.com/w80/pe.png" alt="Peru flag">
+                    </div>
+                    <img src="travel/peru/photos/cover.jpg" alt="Peru" class="travel-card-photo" onerror="this.style.display='none'">
+                    <div class="travel-card-overlay"></div>
+                    <div class="travel-card-label">
+                        <h3>Peru</h3>
+                        <div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/pe.png" alt=""></div>
+                    </div>
+                </a>
+
+                <!-- TEMPLATE — copy and paste for each new country:
+
+                <a href="travel/country-name/index.html" class="travel-card">
+                    <span class="travel-card-badge badge-europe">Europe</span>
+                    <div class="travel-card-flag-bg">
+                        <img src="https://flagcdn.com/w80/xx.png" alt="Country flag">
+                    </div>
+                    <img src="travel/country-name/photos/cover.jpg" alt="Country" class="travel-card-photo" onerror="this.style.display='none'">
+                    <div class="travel-card-overlay"></div>
+                    <div class="travel-card-label">
+                        <h3>Country Name</h3>
+                        <div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/xx.png" alt=""></div>
+                    </div>
+                </a>
+
+                Use the 2-letter ISO country code for xx (e.g. fr=France, de=Germany, jp=Japan)
+                Badge classes: badge-europe, badge-south-america, badge-caribbean, badge-asia, badge-africa, badge-north-america, badge-oceania
+                -->
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="logowhite.png" alt="Charlay Wood" class="footer-logo-img">
+        <p>Copyright © C Wood</p>
+        <p style="font-size:12px; margin-top:5px; opacity:0.7;">No part of this website may be reproduced or distributed without prior written permission from the copyright owner.</p>
+    </footer>
+
+    <script>
+    function filterTravel(continent, btn) {
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Show/hide cards
+        document.querySelectorAll('.travel-card').forEach(card => {
+            if (continent === 'all' || card.dataset.continent === continent) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    </script>
+
+</body>
+</html>
