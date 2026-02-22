@@ -491,7 +491,6 @@ section p { color: var(--text-main); margin-bottom: 16px; }
     box-shadow: none;
 }
 
-
 /* ══════════════════════════════════════════════
    VIDEO MINI GRID (content.html)
 ══════════════════════════════════════════════ */
@@ -555,6 +554,55 @@ section p { color: var(--text-main); margin-bottom: 16px; }
 }
 .video-mini:hover p { color: var(--green-accent); }
 
+/* Coming soon placeholder cards — styled to match site */
+.coming-soon-card {
+    background-color: var(--cream);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1.5px solid rgba(141,110,99,0.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.coming-soon-card:hover {
+    border-color: var(--green-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+}
+
+.coming-soon-img {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 like your video thumbs */
+    background: rgba(78,52,46,0.07);
+}
+
+.coming-soon-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    text-align: centre;
+}
+
+.coming-soon-icon {
+    font-size: 1.6em;
+    opacity: 0.85;
+}
+
+.coming-soon-text {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    margin: 0;
+    font-style: italic;
+}
+
 /* ══════════════════════════════════════════════
    VIDEO GRID (content.html)
 ══════════════════════════════════════════════ */
@@ -586,7 +634,7 @@ section p { color: var(--text-main); margin-bottom: 16px; }
 .video-thumb-img {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 ratio */
+    padding-top: 56.25%;
     overflow: hidden;
     background: #1a1a1a;
 }
@@ -902,6 +950,8 @@ section p { color: var(--text-main); margin-bottom: 16px; }
     padding: 48px; color: var(--text-muted);
     font-style: italic; grid-column: 1 / -1;
 }
+
+.blog-card {
     background-color: var(--cream);
     border-radius: 12px; padding: 24px;
     text-decoration: none; color: inherit;
@@ -968,17 +1018,16 @@ section p { color: var(--text-main); margin-bottom: 16px; }
 }
 
 /* Contact form layout */
-.contact-form{
+.contact-form {
     display: grid;
     gap: 16px;
     max-width: 520px;
     margin: 24px auto 0;
 }
 
-/* hide the honeypot field cleanly */
-.hp-field{ display:none; }
+.hp-field { display: none; }
 
-.contact-form label{
+.contact-form label {
     display: grid;
     gap: 6px;
     font-size: 0.9em;
@@ -986,7 +1035,7 @@ section p { color: var(--text-main); margin-bottom: 16px; }
 }
 
 .contact-form input,
-.contact-form textarea{
+.contact-form textarea {
     padding: 12px 14px;
     border-radius: 10px;
     border: 1.5px solid rgba(141,110,99,0.25);
@@ -996,18 +1045,15 @@ section p { color: var(--text-main); margin-bottom: 16px; }
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus{
+.contact-form textarea:focus {
     outline: none;
     border-color: var(--green-accent);
     box-shadow: 0 0 0 3px rgba(64,145,108,0.18);
 }
 
-/* Make sure the LinkedIn button sits clearly below the form */
-#connect .connect-actions{
-    margin-top: 28px;
-}
-/* Force LinkedIn button styling in Connect section */
-#connect .connect-btn{
+#connect .connect-actions { margin-top: 28px; }
+
+#connect .connect-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1023,17 +1069,18 @@ section p { color: var(--text-main); margin-bottom: 16px; }
     min-width: 160px;
 }
 
-#connect .connect-btn--linkedin{
+#connect .connect-btn--linkedin {
     background-color: #0A66C2;
     color: #fff;
     box-shadow: 0 4px 16px rgba(10,102,194,0.3);
 }
 
-#connect .connect-btn--linkedin:hover{
+#connect .connect-btn--linkedin:hover {
     background-color: #004182;
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(10,102,194,0.4);
 }
+
 /* ══════════════════════════════════════════════
    BUTTONS (GENERAL)
 ══════════════════════════════════════════════ */
@@ -1051,8 +1098,7 @@ button:hover {
     box-shadow: 0 8px 20px rgba(64,145,108,0.4);
 }
 
-/* CTA button (used on Science page collaboration section) */
-.cta-button{
+.cta-button {
     display: inline-block;
     margin-top: 25px;
     padding: 14px 28px;
@@ -1067,11 +1113,12 @@ button:hover {
     letter-spacing: 0.02em;
 }
 
-.cta-button:hover{
+.cta-button:hover {
     background-color: var(--green-mid);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.22);
 }
+
 /* ══════════════════════════════════════════════
    VIDEO PLACEHOLDER
 ══════════════════════════════════════════════ */
@@ -1107,7 +1154,6 @@ button:hover {
     font-style: italic;
 }
 
-/* Inner page sections sit on plain background */
 body.inner-page section { box-shadow: var(--shadow-card); }
 body.inner-page main { padding-bottom: 40px; }
 
@@ -1145,9 +1191,7 @@ body.inner-page main { padding-bottom: 40px; }
 }
 .work-body p { font-size: 0.9em; color: var(--text-muted); margin: 0; }
 
-.achievement-group {
-    margin-bottom: 32px;
-}
+.achievement-group { margin-bottom: 32px; }
 .achievement-group:last-child { margin-bottom: 0; }
 
 .achievement-group-title {
@@ -1174,15 +1218,14 @@ body.inner-page main { padding-bottom: 40px; }
 }
 .achievement-title { font-size: 0.93em; color: var(--text-main); }
 
-/* Achievements: photo cards */
-.achievement-cards{
+.achievement-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
     margin-top: 10px;
 }
 
-.achievement-card{
+.achievement-card {
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -1195,13 +1238,13 @@ body.inner-page main { padding-bottom: 40px; }
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.achievement-card:hover{
+.achievement-card:hover {
     transform: translateY(-4px);
     border-color: var(--green-accent);
     box-shadow: 0 12px 32px rgba(0,0,0,0.12);
 }
 
-.achievement-card-img{
+.achievement-card-img {
     position: relative;
     width: 100%;
     padding-top: 62%;
@@ -1209,7 +1252,7 @@ body.inner-page main { padding-bottom: 40px; }
     overflow: hidden;
 }
 
-.achievement-card-img img{
+.achievement-card-img img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -1220,12 +1263,12 @@ body.inner-page main { padding-bottom: 40px; }
     transition: var(--transition);
 }
 
-.achievement-card:hover .achievement-card-img img{
+.achievement-card:hover .achievement-card-img img {
     transform: scale(1.05);
     filter: brightness(0.75);
 }
 
-.achievement-card-body{
+.achievement-card-body {
     padding: 16px 18px 18px;
     display: flex;
     flex-direction: column;
@@ -1233,7 +1276,7 @@ body.inner-page main { padding-bottom: 40px; }
     flex: 1;
 }
 
-.achievement-card-title{
+.achievement-card-title {
     font-family: var(--font-display);
     font-size: 1.15em;
     font-weight: 600;
@@ -1241,29 +1284,26 @@ body.inner-page main { padding-bottom: 40px; }
     line-height: 1.2;
 }
 
-.achievement-card-desc{
+.achievement-card-desc {
     font-size: 0.88em;
     color: var(--text-muted);
     line-height: 1.6;
     flex: 1;
 }
 
-.achievement-card-link{
+.achievement-card-link {
     font-size: 0.85em;
     font-weight: 500;
     color: var(--green-accent);
     letter-spacing: 0.02em;
 }
 
-@media (max-width: 900px){
-    .achievement-cards{
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 900px) {
+    .achievement-cards { grid-template-columns: 1fr; }
 }
 
-/* Highlight award-winning talks */
 .talk-award {
-    background-color: #E9F8F1; /* very light green tint */
+    background-color: #E9F8F1;
     border: 2px solid var(--green-accent);
     box-shadow: 0 4px 14px rgba(64,145,108,0.15);
     position: relative;
@@ -1283,15 +1323,14 @@ body.inner-page main { padding-bottom: 40px; }
     letter-spacing: 0.05em;
 }
 
-/* Invited Talks — cards with slide previews */
-.talk-cards{
+.talk-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
     margin-top: 10px;
 }
 
-.talk-card{
+.talk-card {
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -1304,21 +1343,21 @@ body.inner-page main { padding-bottom: 40px; }
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.talk-card:hover{
+.talk-card:hover {
     transform: translateY(-4px);
     border-color: var(--green-accent);
     box-shadow: 0 12px 32px rgba(0,0,0,0.12);
 }
 
-.talk-card-img{
+.talk-card-img {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 slide ratio */
+    padding-top: 56.25%;
     background: #1a1a1a;
     overflow: hidden;
 }
 
-.talk-card-img img{
+.talk-card-img img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -1329,12 +1368,12 @@ body.inner-page main { padding-bottom: 40px; }
     transition: var(--transition);
 }
 
-.talk-card:hover .talk-card-img img{
+.talk-card:hover .talk-card-img img {
     transform: scale(1.03);
     filter: brightness(0.78);
 }
 
-.talk-card-body{
+.talk-card-body {
     padding: 16px 18px 18px;
     display: flex;
     flex-direction: column;
@@ -1342,7 +1381,7 @@ body.inner-page main { padding-bottom: 40px; }
     flex: 1;
 }
 
-.talk-card-meta{
+.talk-card-meta {
     font-size: 0.75em;
     color: var(--green-accent);
     font-weight: 500;
@@ -1350,7 +1389,7 @@ body.inner-page main { padding-bottom: 40px; }
     text-transform: uppercase;
 }
 
-.talk-card-title{
+.talk-card-title {
     font-family: var(--font-display);
     font-size: 1.15em;
     font-weight: 600;
@@ -1358,22 +1397,22 @@ body.inner-page main { padding-bottom: 40px; }
     line-height: 1.2;
 }
 
-.talk-card-desc{
+.talk-card-desc {
     font-size: 0.88em;
     color: var(--text-muted);
     line-height: 1.6;
     flex: 1;
 }
 
-.talk-card-link{
+.talk-card-link {
     font-size: 0.85em;
     font-weight: 500;
     color: var(--green-accent);
     letter-spacing: 0.02em;
 }
 
-@media (max-width: 900px){
-    .talk-cards{ grid-template-columns: 1fr; }
+@media (max-width: 900px) {
+    .talk-cards { grid-template-columns: 1fr; }
 }
 
 /* ══════════════════════════════════════════════
@@ -1449,7 +1488,6 @@ footer {
     margin-top: 10px;
 }
 
-/* Reuse your outline button styling but ensure visibility */
 .achievements-link-buttons .btn-outline {
     background-color: transparent;
     color: var(--green-deep);
