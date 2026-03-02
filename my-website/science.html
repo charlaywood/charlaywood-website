@@ -33,7 +33,6 @@
         </div>
     </nav>
 
-
     <div class="inner-hero">
         <div class="inner-hero-content">
             <p class="hero-eyebrow">Research · Publications · Science</p>
@@ -48,7 +47,6 @@
 
     <main id="main">
 
-        <!-- Publications — moved to top -->
         <section id="publications">
             <div class="section-label">Publications & Writing</div>
             <h2>All Publications</h2>
@@ -57,6 +55,7 @@
             <div class="pub-filters" id="pub-filters">
                 <button class="filter-btn" data-filter="all">All</button>
                 <button class="filter-btn active" data-filter="journal-article">Journal Articles</button>
+		<button class="filter-btn" data-filter="summary">Research Summaries</button>
                 <button class="filter-btn" data-filter="plantae">Plantae</button>
                 <button class="filter-btn" data-filter="other">Other</button>
             </div>
@@ -69,7 +68,6 @@
             </div>
         </section>
 
-        <!-- Projects (replaces "Current and Previous Work"; degrees removed) -->
         <section id="projects">
             <div class="section-label">Research</div>
             <h2>Projects</h2>
@@ -109,23 +107,13 @@
             </div>
         </section>
 
-        <!-- Collaboration -->
-<section id="collaboration" class="alt-bg">
-    <div class="section-label">Collaboration</div>
-    <h2>Let’s Work Together</h2>
-    <p>
-        I’m interested in collaborations across plant biochemistry, metabolic engineering,
-        sustainable materials, and translational biology.
-    </p>
-    <p>
-        If you’re a researcher, industry partner, founder, or student exploring related
-        questions, I’d be glad to connect.
-    </p>
-
-    <a href="index.html#connect" class="cta-button">
-        Start a Conversation →
-    </a>
-</section>
+        <section id="collaboration" class="alt-bg">
+            <div class="section-label">Collaboration</div>
+            <h2>Let's Work Together</h2>
+            <p>I'm interested in collaborations across plant biochemistry, metabolic engineering, sustainable materials, and translational biology.</p>
+            <p>If you're a researcher, industry partner, founder, or student exploring related questions, I'd be glad to connect.</p>
+            <a href="index.html#connect" class="cta-button">Start a Conversation →</a>
+        </section>
 
     </main>
 
@@ -138,27 +126,78 @@
     <script>
     const ORCID_ID = '0000-0001-7881-3990';
 
-    // Manual entries — added here, merged and sorted with ORCID results
+    // ─────────────────────────────────────────────────────────────
+    //  MANUAL ENTRIES
+    //  Use this for anything ORCID gets wrong — wrong type, missing,
+    //  or needs a custom description. Any ORCID result whose title
+    //  matches a manual entry is automatically dropped to avoid
+    //  duplicates, so your manual version always wins.
+    //
+    //  To add a new entry, copy one of the blocks below and fill in:
+    //    year     — the publication year (integer)
+    //    sortKey  — yearmonth e.g. 202603 for March 2026 (controls ordering)
+    //    type     — 'journal-article' | 'plantae' | 'other' | 'summary
+    //    meta     — the line shown above the title e.g. 'March 2026 · Nature'
+    //    title    — the article title
+    //    desc     — short description shown on the card
+    //    url      — link to the article
+    // ─────────────────────────────────────────────────────────────
     const MANUAL_PUBS = [
         {
             year: 2026,
-            sortKey: 202602, // Feb 2026
+            sortKey: 202602,
+            type: 'plantae',
+            meta: 'February 2026 · Plantae',
+            title: 'Role of Secondary Metabolites in Society',
+            desc: 'What Vanilla, Morphine, and Denim Have in Common. Think about the last thing you ate. Maybe there was a hint of vanilla. Or a bitter edge to your coffee. Perhaps you drank something dark red: a berry smoothie, a glass of red wine. Co-authored with other Plantae Fellows',
+            url: 'https://plantae.org/how-to-build-a-start-up-in-plant-sciences/'
+            }, 
+	    {
+            year: 2026,
+            sortKey: 202602,
             type: 'plantae',
             meta: 'February 2026 · Plantae',
             title: 'How to Build a Start-up in Plant Sciences',
             desc: 'A guide for plant scientists on entrepreneurship — from problem–solution fit and product–market fit, to IP, funding, and the realities of building a company around biological innovation. Co-authored with Fengoula Avgeri.',
             url: 'https://plantae.org/how-to-build-a-start-up-in-plant-sciences/'
         },
+	{
+            year: 2026,
+            sortKey: 202601,
+            type: 'summary',
+            meta: 'January 2026 · ASPB Plant Science Research Weekly',
+            title: 'Review: RUBY: a genetically encoded visible reporter for plant biology',
+            desc: 'The impact of RUBY as a visible betalain-based reporter system, which converts endogenous tyrosine into red pigment,',
+            url: 'https://plantae.org/review-ruby-a-genetically-encoded-visible-reporter-for-plant-biology/'
+        },
         {
             year: 2023,
-            sortKey: 202308, // Aug 2023
+            sortKey: 202308,
             type: 'other',
             meta: 'August 2023 · ASPB Plant Science Today',
             title: 'From Plant Biology 2023: The Evolutionary Origin of Acutumine Biosynthesis in Menispermaceae Plants',
             desc: 'An interview with Prof. Jing-Ke Weng on acutumine biosynthesis, enzyme discovery, and the future of predicting metabolic pathways using AI and structural biology. Written as ASPB 2023 Conference Correspondent.',
             url: 'https://blog.aspb.org/from-plant-biology-2023-the-evolutionary-origin-of-acutumine-biosynthesis-in-menispermaceae-plants/'
-        }
+        },
+        {
+            year: 2022,
+            sortKey: 202212,
+            type: 'other',
+            meta: 'December 2022 · The Biochemist',
+            title: 'Celebrating those who stand up for science against the odds',
+            desc: 'An interview with 2022 Maddox Prize Winner Eucharia Nwaichi, published in The Biochemist, the membership magazine of the Biochemical Society. Chosen to represent Early Career Researchers in the science community.',
+            url: 'https://portlandpress.com/biochemist/article/44/6/15/232372/Celebrating-those-who-stand-up-for-science-against'
+        },
     ];
+
+    // Titles of manual entries (lowercased) — used to suppress ORCID duplicates
+    const MANUAL_TITLES = new Set(
+        MANUAL_PUBS.map(p => p.title.toLowerCase().trim())
+    );
+    // DOIs to suppress from ORCID — more reliable than title matching
+    const SUPPRESS_DOIS = new Set([
+        '10.1042/bio_2022_140',  // The Biochemist 2022 — overridden as type 'other'
+    ]);
 
     function badgeClass(type) {
         return type === 'journal-article' ? 'badge-journal'
@@ -170,8 +209,8 @@
         return type === 'journal-article' ? 'Journal Article'
              : type.charAt(0).toUpperCase() + type.slice(1);
     }
-    function makeCard(item, defaultFilter) {
-        const show = defaultFilter === 'all' || item.type === defaultFilter;
+    function makeCard(item, activeFilter) {
+        const show = activeFilter === 'all' || item.type === activeFilter;
         return `<a href="${item.url}" target="_blank" rel="noopener"
            class="pub-card" data-type="${item.type}" data-year="${item.year}"
            style="${show ? '' : 'display:none;'}">
@@ -195,35 +234,43 @@
             const data = await res.json();
             const works = data.group || [];
 
-            // Build ORCID entries
-            const orcidPubs = works.map(group => {
-                const w       = group['work-summary'][0];
-                const year    = parseInt(w?.['publication-date']?.year?.value) || 0;
-                const month   = parseInt(w?.['publication-date']?.month?.value) || 0;
-                const type    = w?.type || 'other';
-                const journal = w?.['journal-title']?.value || '';
-                const title   = w?.title?.title?.value || 'Untitled';
-                const doi     = w?.['external-ids']?.['external-id']
-                                  ?.find(e => e['external-id-type'] === 'doi')
-                                  ?.['external-id-value'] || null;
-                const url     = doi ? `https://doi.org/${doi}` : (w?.url?.value || `https://orcid.org/${ORCID_ID}`);
-                const monthStr = ''; // month from ORCID is unreliable — show year only
-                return {
-                    year, sortKey: year * 100 + month, type,
-                    meta: `${monthStr}${year}${journal ? ' · ' + journal.toUpperCase() : ''}`,
-                    title,
-                    desc: doi ? 'DOI: ' + doi : 'View on ORCID',
-                    url
-                };
-            });
+            const orcidPubs = works
+                .map(group => {
+                    const w       = group['work-summary'][0];
+                    const year    = parseInt(w?.['publication-date']?.year?.value) || 0;
+                    const month   = parseInt(w?.['publication-date']?.month?.value) || 0;
+                    const type    = w?.type || 'other';
+                    const journal = w?.['journal-title']?.value || '';
+                    const title   = w?.title?.title?.value || 'Untitled';
+                    const doi     = w?.['external-ids']?.['external-id']
+                                      ?.find(e => e['external-id-type'] === 'doi')
+                                      ?.['external-id-value'] || null;
+                    const url     = doi
+                                      ? `https://doi.org/${doi}`
+                                      : (w?.url?.value || `https://orcid.org/${ORCID_ID}`);
+                    return {
+                        year, sortKey: year * 100 + month, type,
+                        meta: `${year}${journal ? ' · ' + journal.toUpperCase() : ''}`,
+                        title,
+                        doi: doi || '',
+                        desc: doi ? 'DOI: ' + doi : 'View on ORCID',
+                        url
+                    };
+                })
+                // Drop ORCID entries that are overridden manually —
+                // match on DOI first (exact), then fall back to title
+                .filter(p =>
+                    !SUPPRESS_DOIS.has(p.doi.toLowerCase().trim()) &&
+                    !MANUAL_TITLES.has(p.title.toLowerCase().trim())
+                );
 
-            // Merge manual + ORCID, sort descending by sortKey
+            // Merge and sort newest first
             const all = [...MANUAL_PUBS, ...orcidPubs]
                 .sort((a, b) => b.sortKey - a.sortKey);
 
             container.innerHTML = `<div class="pub-list">${all.map(p => makeCard(p, DEFAULT)).join('')}</div>`;
 
-            // Filter logic
+            // Filter buttons
             filters.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
                     filters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -236,6 +283,7 @@
             });
 
         } catch (err) {
+            // If ORCID is unreachable, show manual entries only
             container.innerHTML = `
                 <div class="pub-list">
                     ${MANUAL_PUBS.map(p => makeCard(p, DEFAULT)).join('')}
