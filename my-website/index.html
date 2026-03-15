@@ -4,10 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charlay Wood | Plant Biochemist</title>
+    <meta name="description" content="Charlay Wood is a plant biochemist and postdoctoral researcher at UW–Madison, working on metabolic engineering, specialised metabolism, and translational crop science.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Charlay Wood | Plant Biochemist">
+    <meta property="og:description" content="Plant biochemist and postdoctoral researcher at UW–Madison. Research, writing, travel, and everything in between.">
+    <meta property="og:image" content="https://charlaywood.com/mainphoto.jpg">
+    <meta property="og:url" content="https://charlaywood.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Charlay Wood">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Charlay Wood | Plant Biochemist">
+    <meta name="twitter:description" content="Plant biochemist and postdoctoral researcher at UW–Madison. Research, writing, travel, and everything in between.">
+    <meta name="twitter:image" content="https://charlaywood.com/mainphoto.jpg">
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logonone.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ── Travel Carousel ── */
+        .travel-carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .travel-carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .travel-carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+        .travel-carousel-slide img {
+            width: 100%;
+            height: 450px;
+            object-fit: contain;
+            display: block;
+            background: #111;
+        }
+        .travel-carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px 20px 16px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: #fff;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .travel-carousel-caption-place {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .travel-carousel-caption-country {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 2px;
+        }
+        .travel-carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.85);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: background 0.2s, opacity 0.2s;
+            color: #222;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .travel-carousel-btn:hover {
+            background: #fff;
+        }
+        .travel-carousel-btn--prev { left: 12px; }
+        .travel-carousel-btn--next { right: 12px; }
+        .travel-carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .travel-carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: none;
+            background: var(--text-muted, #aaa);
+            opacity: 0.4;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.2s;
+            padding: 0;
+        }
+        .travel-carousel-dot.active {
+            opacity: 1;
+            transform: scale(1.3);
+            background: var(--green-accent, #2e7d32);
+        }
+        @media (max-width: 600px) {
+            .travel-carousel-slide img {
+                height: 280px;
+            }
+            .travel-carousel-btn {
+                width: 34px;
+                height: 34px;
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
 <body id="home">
 
@@ -40,14 +156,14 @@
                 <h1 class="hero-name">Charlay<br>Wood</h1>
                 <p class="hero-tagline">Designing the chemistry of life.</p>
                 <p class="hero-bio">
-Researcher by training, endlessly curious by nature. Here you’ll find my research, travels, creative projects, and the threads that connect them.
+Biochemist by training, endlessly curious by nature. I engineer plant metabolic pathways by day and spend the rest of my time making content, dancing tango, learning languages, and exploring the world.
 </p>
 <div class="hero-actions">
     <a href="https://blog.charlaywood.com/" class="btn-primary">
         Read My Blog
     </a>
-    <a href="CV.jpg" class="btn-secondary" target="_blank">
-        Download CV
+    <a href="science.html" class="btn-secondary">
+        Explore My Work
     </a>
 </div>
                <div class="hero-links">
@@ -81,7 +197,7 @@ Researcher by training, endlessly curious by nature. Here you’ll find my resea
             <span class="stat-number" id="pub-count">—</span>
             <span class="stat-label">Publications</span>
         </div>
-        <div class="stat-divider"></div>
+	<div class="stat-divider"></div>
         <div class="stat">
             <span class="stat-number">4+</span>
             <span class="stat-label">Languages</span>
@@ -98,10 +214,10 @@ Researcher by training, endlessly curious by nature. Here you’ll find my resea
         <h2>The full picture</h2>
         <div class="about-grid">
             <div class="about-main">
-                <p>Welcome to my corner of the web. I’m Charlay — a biochemist with a PhD in plant biochemistry, a passion for discovery, and a firm belief that curiosity doesn’t stop at the lab door.</p>
-                <p>My work sits at the intersection of plant biochemistry and metabolic engineering. I investigate how plants construct specialised metabolites and how those pathways can be redesigned for real-world applications — from sustainable materials to natural products.
-I’ve led and contributed to projects spanning enzyme discovery, pathway characterisation, and translational crop engineering, presenting internationally and collaborating across academia and industry.</p>
-                <p>This site brings together my research, writing, and broader projects — a record of what I’ve built so far, and where I’m heading next.</p>
+                <p>Welcome to my corner of the web. I'm Charlay — a biochemist with a PhD in plant biochemistry, a passion for discovery, and a firm belief that curiosity doesn't stop at the lab door.</p>
+                <p>I study how plants build specialised metabolites and how those pathways can be redesigned for practical use, from sustainable materials to natural products.
+I've led and contributed to projects spanning enzyme discovery, pathway characterisation, and translational crop engineering, presenting internationally and collaborating across academia and industry.</p>
+                <p>This site brings together my research, writing, and broader projects — a record of what I've built so far, and where I'm heading next.</p>
             </div>
             <div class="about-ctas">
                 <a href="CV.jpg" class="about-btn" download>
@@ -127,8 +243,7 @@ I’ve led and contributed to projects spanning enzyme discovery, pathway charac
     <section id="science-teaser" class="alt-bg">
         <div class="section-label">02 — Research</div>
         <h2>Latest Publication 🔬</h2>
-        <p class="section-intro">A snapshot of my most recent peer-reviewed work.</p>
-        <div id="latest-pub-container">
+            <div id="latest-pub-container">
             <div class="pub-card pub-card--featured loading-pulse">
                 <div class="pub-meta">Loading from ORCID…</div>
                 <div class="pub-title">Fetching your latest publication…</div>
@@ -182,12 +297,67 @@ I’ve led and contributed to projects spanning enzyme discovery, pathway charac
     <section id="travel-teaser" class="alt-bg">
         <div class="section-label">04 — Travel</div>
         <h2>Travel ✈️</h2>
-        <p class="section-intro">Exploring the world, experiencing new cultures, and taking my curiosity across the globe.</p>
-        <div class="travel-placeholder-grid">
-            <div class="travel-ph-card">📸<span>Coming soon</span></div>
-            <div class="travel-ph-card">📸<span>Coming soon</span></div>
-            <div class="travel-ph-card">📸<span>Coming soon</span></div>
+        <p class="section-intro">Exploring the world, one conference, adventure, and detour at a time.</p>
+
+        <div class="travel-carousel" id="travel-carousel">
+            <div class="travel-carousel-track" id="carousel-track">
+
+                <div class="travel-carousel-slide">
+                    <img src="images/travel/photo1.jpg" alt="Travel photo">
+                    <div class="travel-carousel-caption">
+                        <div class="travel-carousel-caption-place">The Pyramids of Lima</div>
+                        <div class="travel-carousel-caption-country">Peru</div>
+                    </div>
+                </div>
+
+                <div class="travel-carousel-slide">
+                    <img src="images/travel/photo2.jpg" alt="Travel photo">
+                    <div class="travel-carousel-caption">
+                        <div class="travel-carousel-caption-place">Chasing Waterfalls</div>
+                        <div class="travel-carousel-caption-country">Niagara Falls, Canada</div>
+                    </div>
+                </div>
+
+                <div class="travel-carousel-slide">
+                    <img src="images/travel/photo9.jpg" alt="Travel photo">
+                    <div class="travel-carousel-caption">
+                        <div class="travel-carousel-caption-place">Paying homage to the Tango Star Carlos Gardel</div>
+                        <div class="travel-carousel-caption-country">Buenos Aires, Argentina</div>
+                    </div>
+                </div>
+
+                <div class="travel-carousel-slide">
+                    <img src="images/travel/photo7.jpg" alt="Travel photo">
+                    <div class="travel-carousel-caption">
+                        <div class="travel-carousel-caption-place">At Gnossos Palace - The place of Europe's oldest civlisation</div>
+                        <div class="travel-carousel-caption-country">Crete, Greece</div>
+                    </div>
+                </div>
+
+                <div class="travel-carousel-slide">
+                    <img src="images/travel/photo5.jpg" alt="Travel photo">
+                    <div class="travel-carousel-caption">
+                        <div class="travel-carousel-caption-place">Alligator Hunting</div>
+                        <div class="travel-carousel-caption-country">Everglades, Florida</div>
+                    </div>
+                </div>
+
+                <div class="travel-carousel-slide">
+                    <img src="images/travel/photo10.jpg" alt="Travel photo">
+                    <div class="travel-carousel-caption">
+                        <div class="travel-carousel-caption-place">Sun, Sea & Sand</div>
+                        <div class="travel-carousel-caption-country">Jamaica</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="travel-carousel-btn travel-carousel-btn--prev" aria-label="Previous photo">&#8249;</button>
+            <button class="travel-carousel-btn travel-carousel-btn--next" aria-label="Next photo">&#8250;</button>
         </div>
+
+        <div class="travel-carousel-dots" id="carousel-dots"></div>
+
         <a href="travel.html" class="btn-outline" style="margin-top:28px; display:inline-block;">
             See All Adventures →
         </a>
@@ -201,13 +371,13 @@ I’ve led and contributed to projects spanning enzyme discovery, pathway charac
             <a href="life/tango.html" class="life-card-block">
                 <div class="life-card-block-icon">💃</div>
                 <h3>Argentine Tango</h3>
-                <p>Dancing since 2014. Former President of Warwick University Tango Society, instructor at York’s Northern Tango Academy, and now resident instructor at UW-Madison Tango.</p>
+                <p>Dancing since 2014. Former President of Warwick University Tango Society, instructor at York's Northern Tango Academy, and now resident instructor at UW-Madison Tango.</p>
                 <span class="life-card-block-link">Read more →</span>
             </a>
             <a href="life/football.html" class="life-card-block">
                 <div class="life-card-block-icon">⚽</div>
                 <h3>Sports &amp; Football</h3>
-                <p>Yes, it’s football — not soccer. A recent passion of mine to play, but a lifelong Arsenal supporter. The beautiful game in every sense.</p>
+                <p>Yes, it's football — not soccer. A recent passion of mine to play, but a lifelong Arsenal supporter. The beautiful game in every sense.</p>
                 <span class="life-card-block-link">Read more →</span>
             </a>
             <a href="life/languages.html" class="life-card-block">
@@ -222,15 +392,15 @@ I’ve led and contributed to projects spanning enzyme discovery, pathway charac
     <section id="rambling" class="alt-bg">
         <div class="section-label">06 — Blog</div>
         <h2>Rambling on… 💭</h2>
-        <p>Thoughts, ideas, and musings that don’t quite fit into a scientific journal. Science communication, life observations, and the occasional tangent about plants, tango, or travel.</p>
+        <p>Thoughts, ideas, and musings that don't quite fit into a scientific journal. Science communication, life observations, and the occasional tangent about plants, tango, or travel.</p>
         <a href="https://blog.charlaywood.com/" class="btn-primary" style="display:inline-block; text-decoration:none; margin-top:8px;">Read my Blog →</a>
     </section>
 
     <section id="connect">
     <div class="section-label">07 — Connect</div>
-    <h2>Let’s Talk 🤝</h2>
+    <h2>Let's Talk 🤝</h2>
     <p class="section-intro">
-        I’m open to collaborations, speaking invitations, media enquiries, science communication, and the occasional tango.
+        I'm open to collaborations, speaking invitations, media enquiries, science communication, and the occasional tango.
     </p>
 
     <div class="connect-tags">
@@ -248,7 +418,7 @@ I’ve led and contributed to projects spanning enzyme discovery, pathway charac
 
         <!-- Honeypot spam field -->
         <p class="hp-field">
-            <label>Don’t fill this part out, unless you are a robot: <input name="bot-field"></label>
+            <label>Don't fill this part out, unless you are a robot: <input name="bot-field"></label>
         </p>
 
         <label>
@@ -287,6 +457,7 @@ I’ve led and contributed to projects spanning enzyme discovery, pathway charac
     </footer>
 
     <script>
+    /* ── ORCID latest publication ── */
     const ORCID_ID = '0000-0001-7881-3990';
     const ORCID_API = `https://pub.orcid.org/v3.0/${ORCID_ID}/works`;
 
@@ -346,6 +517,76 @@ I’ve led and contributed to projects spanning enzyme discovery, pathway charac
     }
 
     loadLatestPublication();
+
+    /* ── Travel Carousel ── */
+    document.addEventListener('DOMContentLoaded', () => {
+        const track  = document.getElementById('carousel-track');
+        const slides = track.querySelectorAll('.travel-carousel-slide');
+        const prev   = document.querySelector('.travel-carousel-btn--prev');
+        const next   = document.querySelector('.travel-carousel-btn--next');
+        const dotsWrap = document.getElementById('carousel-dots');
+        const total  = slides.length;
+        let current  = 0;
+        let autoTimer = null;
+        const AUTO_DELAY = 8000;
+
+        /* Build dots */
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('travel-carousel-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.setAttribute('aria-label', `Go to photo ${i + 1}`);
+            dot.addEventListener('click', () => { goTo(i); pauseAuto(); });
+            dotsWrap.appendChild(dot);
+        });
+        const dots = dotsWrap.querySelectorAll('.travel-carousel-dot');
+
+        function goTo(index) {
+            current = ((index % total) + total) % total;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        }
+
+        prev.addEventListener('click', () => { goTo(current - 1); pauseAuto(); });
+        next.addEventListener('click', () => { goTo(current + 1); pauseAuto(); });
+
+        /* Auto-scroll */
+        function startAuto() {
+            autoTimer = setInterval(() => goTo(current + 1), AUTO_DELAY);
+        }
+        function pauseAuto() {
+            clearInterval(autoTimer);
+            /* Restart after a pause so it doesn't stop forever */
+            setTimeout(startAuto, AUTO_DELAY * 2);
+        }
+        startAuto();
+
+        /* Touch / swipe support */
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const carousel = document.getElementById('travel-carousel');
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) { goTo(current + 1); }
+                else { goTo(current - 1); }
+                pauseAuto();
+            }
+        }, { passive: true });
+
+        /* Keyboard */
+        carousel.setAttribute('tabindex', '0');
+        carousel.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') { goTo(current - 1); pauseAuto(); }
+            if (e.key === 'ArrowRight') { goTo(current + 1); pauseAuto(); }
+        });
+    });
     </script>
 
 </body>
