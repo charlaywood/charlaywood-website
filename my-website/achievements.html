@@ -143,13 +143,13 @@
 
     <main id="main">
 
-        <section class="achievements-links">
+       <section class="achievements-links">
             <div class="section-label">Quick links</div>
             <div class="achievements-link-buttons">
-                <a href="CV.jpg" class="btn-outline" target="_blank" rel="noopener">📄 CV</a>
+                <a href="CV.pdf" class="btn-outline" target="_blank" rel="noopener">📄 <i>Curriculum vitae</i></a>
                 <a href="Work-history.html" class="btn-outline">💼 Work History</a>
                 <a href="Education.html" class="btn-outline">🎓 Education</a>
-                <a href="life/languages.html" class="btn-outline">🗣️ Languages</a>
+                <a href="achievements.html" class="btn-outline">🏆 Achievements</a>
             </div>
         </section>
 
@@ -272,18 +272,29 @@
                 <button class="filter-btn active" data-filter="speaker">Speaker</button>
                 <button class="filter-btn" data-filter="poster">Poster</button>
                 <button class="filter-btn" data-filter="attended">Attended</button>
+		<button class="filter-btn active" data-filter="upcoming">Upcoming</button>
             </div>
 
             <div class="achievement-list" id="talk-list">
+		
+		<div class="achievement-item" data-type="upcoming">
+                    <span class="achievement-year">2026</span>
+                    <span class="achievement-title">Directing Biosynthesis VII — Manchester, UK — <strong>Upcoming</strong></span>
+                </div>
 
-                <div class="achievement-item" data-type="attended">
-                    <span class="achievement-year">2025</span>
-                    <span class="achievement-title">NeurIPS — San Diego, CA, USA — <strong>Attended</strong></span>
+		 <div class="achievement-item" data-type="upcoming">
+                    <span class="achievement-year">2026</span>
+                    <span class="achievement-title">PSNA — Madison, WI, USA — <strong>Upcoming</strong></span>
                 </div>
 
                 <div class="achievement-item talk-award" data-type="speaker">
                     <span class="achievement-year">2026</span>
                     <span class="achievement-title">Biobased Symposium — Madison, WI, USA — <strong>Speaker</strong></span>
+                </div>
+
+		 <div class="achievement-item" data-type="attended">
+                    <span class="achievement-year">2025</span>
+                    <span class="achievement-title">NeurIPS — San Diego, CA, USA — <strong>Attended</strong></span>
                 </div>
 
                 <div class="achievement-item" data-type="attended">
@@ -557,27 +568,52 @@
         const filters = document.getElementById('talk-filters');
         const list    = document.getElementById('talk-list');
         if (filters && list) {
-            const DEFAULT = 'speaker';
-            const items   = Array.from(list.querySelectorAll('.achievement-item'));
-            const buttons = Array.from(filters.querySelectorAll('.filter-btn'));
+            const DEFAULTS = ['speaker', 'upcoming'];
+            const items    = Array.from(list.querySelectorAll('.achievement-item'));
+            const buttons  = Array.from(filters.querySelectorAll('.filter-btn'));
 
-            function applyFilter(type) {
+            let activeFilters = [...DEFAULTS];
+
+            function applyFilter() {
                 items.forEach(item => {
-                    item.style.display = (type === 'all' || item.dataset.type === type) ? 'flex' : 'none';
+                    if (activeFilters.includes('all')) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = activeFilters.includes(item.dataset.type) ? 'flex' : 'none';
+                    }
                 });
             }
-            function setActive(type) {
-                buttons.forEach(b => b.classList.toggle('active', b.dataset.filter === type));
+
+            function updateButtons() {
+                buttons.forEach(b => b.classList.toggle('active', activeFilters.includes(b.dataset.filter)));
             }
+
             buttons.forEach(btn => {
                 btn.addEventListener('click', () => {
                     const f = btn.dataset.filter;
-                    setActive(f);
-                    applyFilter(f);
+                    if (f === 'all') {
+                        activeFilters = ['all'];
+                    } else {
+                        // Remove 'all' if it was active
+                        activeFilters = activeFilters.filter(x => x !== 'all');
+                        // Toggle the clicked filter
+                        if (activeFilters.includes(f)) {
+                            activeFilters = activeFilters.filter(x => x !== f);
+                        } else {
+                            activeFilters.push(f);
+                        }
+                        // If nothing is selected, fall back to 'all'
+                        if (activeFilters.length === 0) {
+                            activeFilters = ['all'];
+                        }
+                    }
+                    updateButtons();
+                    applyFilter();
                 });
             });
-            setActive(DEFAULT);
-            applyFilter(DEFAULT);
+
+            updateButtons();
+            applyFilter();
         }
 
         /* ── All modals (talk cards + achievement cards) ── */
