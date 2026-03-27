@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argentine Tango | Charlay Wood</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logonone.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .blog-cta {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--green-deep); color: white;
+            padding: 14px 28px; border-radius: 8px;
+            text-decoration: none; font-weight: 500; font-size: 1em;
+            margin-top: 28px; transition: background 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 16px rgba(27,67,50,0.3);
+        }
+        .blog-cta:hover { background: var(--green-accent); transform: translateY(-2px); }
+        .photo-gallery { columns: 3; column-gap: 16px; margin-top: 32px; }
+        @media (max-width: 768px) { .photo-gallery { columns: 2; } }
+        @media (max-width: 480px) { .photo-gallery { columns: 1; } }
+        .photo-item { break-inside: avoid; margin-bottom: 16px; border-radius: 10px; overflow: hidden; cursor: pointer; }
+        .photo-item img { width: 100%; display: block; transition: transform 0.3s ease; }
+        .photo-item:hover img { transform: scale(1.02); }
+        .photo-caption { font-size: 0.78em; color: var(--text-muted); font-style: italic; margin-top: 6px; padding: 0 4px; }
+        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; cursor: pointer; }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 6px; cursor: default; }
+        .lightbox-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 2em; cursor: pointer; opacity: 0.7; }
+        .lightbox-close:hover { opacity: 1; }
+        .photo-placeholder { padding: 40px; text-align: center; color: var(--text-muted); font-style: italic; background: var(--cream); border-radius: 10px; }
+    </style>
+</head>
+<body class="inner-page">
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+   <nav>
+        <a href="index.html" class="nav-logo"><img src="logowhite.png" alt="Charlay Wood" class="nav-logo-img"><span class="nav-logo-name">Charlay Wood</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+           <div class="dropdown">
+    		<a href="index.html#about" class="dropbtn">About ▾</a>
+    		<div class="dropdown-content"><div class="dropdown-content-inner">
+        		<a href="Work-history.html">Work History</a>
+        		<a href="Education.html">Education</a>
+        		<a href="achievements.html">Achievements</a>
+        		<a href="CV.pdf" target="_blank" rel="noopener">Curriculum Vitae</a>
+    		</div></div>
+		</div>
+            <a href="science.html">Science</a>
+            <a href="content.html">Content</a>
+            <a href="travel.html">Travel</a>
+            <div class="dropdown">
+                <a class="dropbtn">Life ▾</a>
+                <div class="dropdown-content"><div class="dropdown-content-inner">
+                    <a href="tango.html">Argentine Tango</a>
+                    <a href="football.html">Sports</a>
+                    <a href="languages.html">Languages</a>
+                </div></div></div>
+            <a href="https://blog.charlaywood.com/">Blog</a>
+            <a href="index.html#connect">Connect</a>
+        </div>
+    </nav>
+
+    <div class="inner-hero">
+        <div class="inner-hero-content">
+            <p class="hero-eyebrow">Life · Passion · Dance</p>
+            <h1 class="inner-hero-title">Argentine Tango 💃</h1>
+            <p class="inner-hero-sub">Over a decade of dancing, teaching, and competing, from Warwick to Shanghai to Buenos Aires.</p>
+            <a href="https://blog.charlaywood.com/category/argentine-tango/" class="blog-cta" target="_blank" rel="noopener">
+                ✍️ Read about my tango journey on the blog ↗
+            </a>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <section>
+            <div class="section-label"></div>
+            <h2>How It Started</h2>
+            <p>When I arrived at Warwick University in 2014, I decided I wanted to learn to dance. Not any dance in particular, just dancing as a skill. So I did what any sensible person would do: I joined every dance society I could find.</p>
+            <p>Salsa, ballroom, contemporary, you name it. But it was Argentine tango that stuck. There's something about tango that gets hold of you: the music, the connection, the constant pursuit of something that always feels slightly just out of reach. I was quickly hooked, and before long I'd become President of the Warwick Argentine Tango Society.</p>
+        </section>
+
+        <section class="alt-bg">
+            <div class="section-label"></div>
+            <h2>Teaching</h2>
+            <p>Teaching tango has been a constant thread in my life through the last decade</p>
+
+            <h3>Warwick Argentine Tango Society (2014–2017)</h3>
+            <p>It started at Warwick, where I taught as part of the university society. What began as classes for fellow students turned into running the society as President, organising socials, and building a community of dancers from scratch each year.</p>
+
+            <h3>Shanghai (2017–2018)</h3>
+            <p>After graduating, I moved to Shanghai and ran my own tango classes. Teaching a Latin American dance, in English and Mandarin, to an international crowd in China was an experience in itself.</p>
+
+            <h3>Oxford Tango Academy (2018–2020)</h3>
+            <p>Back in the UK, I became the assistant instructor for Oxford Tango Academy. During that time I helped take students on a trip to Buenos Aires, the mecca of tango, to train and dance in the city where it all began. I was also on the organising committee for the 8th Oxford Tango Festival in 2019, and established weekly classes in St Albans.</p>
+
+            <h3>Northern Tango Academy, York (2022–2023)</h3>
+            <p>When I moved to York for my PhD, I got involved with the Northern Tango Academy, teaching and helping to keep the local tango scene alive in the north of England.</p>
+
+            <h3>Tango Club UW, Madison (2025–present)</h3>
+            <p>Now in Madison, I'm the instructor for Tango Club UW. Every city, every group of students, every dancefloor teaches you something new.</p>
+        </section>
+
+        <section>
+            <div class="section-label"></div>
+            <h2>Competing</h2>
+            <p>In 2017 I competed at the UK Tango Championships in both the salon and escenario categories. Competitive tango is a different beast to social dancing: there's a panel of judges, a set format, and the pressure of performing something that's normally built on spontaneity. It was nerve-wracking and brilliant in equal measure.</p>
+            <a href="https://030tango.com/video/uk-tango-championship-2017-tango-de-pista-qualification-round-3/" class="blog-cta" target="_blank" rel="noopener">
+                🎥 Watch the qualification round on 030tango.com ↗
+            </a>
+        </section>
+
+<section class="alt-bg">
+    <div class="section-label"></div>
+    <h2>Photos</h2>
+    <div class="photo-gallery" style="column-count: 3; column-gap: 12px;">
+        <img src="images/tango/tango1.jpg" alt="Tango" style="width: 100%; border-radius: 10px; margin-bottom: 12px; display: block; cursor: pointer;">
+        <img src="images/tango/tango2.jpg" alt="Tango" style="width: 100%; border-radius: 10px; margin-bottom: 12px; display: block; cursor: pointer;">
+        <img src="images/tango/tango3.jpg" alt="Tango" style="width: 100%; border-radius: 10px; margin-bottom: 12px; display: block; cursor: pointer;">
+        <img src="images/tango/tango4.jpg" alt="Tango" style="width: 100%; border-radius: 10px; margin-bottom: 12px; display: block; cursor: pointer;">
+        <img src="images/tango/tango5.jpg" alt="Tango" style="width: 100%; border-radius: 10px; margin-bottom: 12px; display: block; cursor: pointer;">
+    </div>
+</section>
+
+</main>
+
+    <footer>
+        <img src="logowhite.png" alt="Charlay Wood" class="footer-logo-img">
+        <p>Copyright © C Wood</p>
+        <p style="font-size:12px; margin-top:5px; opacity:0.7;">No part of this website may be reproduced or distributed without prior written permission from the copyright owner.</p>
+    </footer>
+
+    <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; cursor:pointer; justify-content:center; align-items:center;">
+        <img id="lightbox-img" style="max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 8px 32px rgba(0,0,0,0.4);">
+    </div>
+
+    <script>
+    const lightbox = document.getElementById('lightbox');
+
+    document.querySelectorAll('.photo-gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+            document.getElementById('lightbox-img').src = img.src;
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') lightbox.style.display = 'none';
+    });
+    </script>
+
+</body>
+</html>

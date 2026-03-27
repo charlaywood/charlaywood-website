@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football | Charlay Wood</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logonone.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .blog-cta {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--green-deep); color: white;
+            padding: 14px 28px; border-radius: 8px;
+            text-decoration: none; font-weight: 500; font-size: 1em;
+            margin-top: 28px; transition: background 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 16px rgba(27,67,50,0.3);
+        }
+        .blog-cta:hover { background: var(--green-accent); transform: translateY(-2px); }
+        .photo-gallery { columns: 3; column-gap: 16px; margin-top: 32px; }
+        @media (max-width: 768px) { .photo-gallery { columns: 2; } }
+        @media (max-width: 480px) { .photo-gallery { columns: 1; } }
+        .photo-item { break-inside: avoid; margin-bottom: 16px; border-radius: 10px; overflow: hidden; cursor: pointer; }
+        .photo-item img { width: 100%; display: block; transition: transform 0.3s ease; }
+        .photo-item:hover img { transform: scale(1.02); }
+        .photo-caption { font-size: 0.78em; color: var(--text-muted); font-style: italic; margin-top: 6px; padding: 0 4px; }
+        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; cursor: pointer; }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 6px; cursor: default; }
+        .lightbox-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 2em; cursor: pointer; opacity: 0.7; }
+        .lightbox-close:hover { opacity: 1; }
+        .photo-placeholder { padding: 40px; text-align: center; color: var(--text-muted); font-style: italic; background: var(--cream); border-radius: 10px; }
+    </style>
+</head>
+<body class="inner-page">
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+   <nav>
+        <a href="index.html" class="nav-logo"><img src="logowhite.png" alt="Charlay Wood" class="nav-logo-img"><span class="nav-logo-name">Charlay Wood</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+           <div class="dropdown">
+    		<a href="index.html#about" class="dropbtn">About ▾</a>
+    		<div class="dropdown-content"><div class="dropdown-content-inner">
+        		<a href="Work-history.html">Work History</a>
+        		<a href="Education.html">Education</a>
+        		<a href="achievements.html">Achievements</a>
+        		<a href="CV.pdf" target="_blank" rel="noopener">Curriculum Vitae</a>
+    		</div></div>
+		</div>
+            <a href="science.html">Science</a>
+            <a href="content.html">Content</a>
+            <a href="travel.html">Travel</a>
+            <div class="dropdown">
+                <a class="dropbtn">Life ▾</a>
+                <div class="dropdown-content"><div class="dropdown-content-inner">
+                    <a href="tango.html">Argentine Tango</a>
+                    <a href="football.html">Sports</a>
+                    <a href="languages.html">Languages</a>
+                </div></div></div>
+            <a href="https://blog.charlaywood.com/">Blog</a>
+            <a href="index.html#connect">Connect</a>
+        </div>
+    </nav>
+
+    <div class="inner-hero">
+        <div class="inner-hero-content">
+            <p class="hero-eyebrow">Life · Sport · Arsenal</p>
+            <h1 class="inner-hero-title">Football ⚽</h1>
+            <p class="inner-hero-sub">Yes, it's football. Not soccer.</p>
+            <a href="https://blog.charlaywood.com/category/sports" class="blog-cta" target="_blank" rel="noopener">
+                ✍️ Read more on the blog ↗
+            </a>
+        </div>
+    </div>
+
+    <main id="main">
+
+<section>
+    <div class="section-label"></div>
+   <h2 style="display:flex; justify-content:space-between; align-items:center;">How It Started <a href="https://www.arsenal.com/" target="_blank" rel="noopener"><img src="images/football/arsenallogo.png" alt="Arsenal FC" style="height:60px;"></a></h2>
+ <p>Supporting Arsenal runs in the family. My grandfather was a Gooner, my father is, my uncle is, so naturally I am too. But the moment it really began for me was a school project in primary school. We had to bring in a newspaper clipping and talk about it in class. I asked my Dad to find something from that morning's paper. What news can you give a child? Obviously, that Thierry Henry was the highest goal scorer in the Premier League that season.</p>
+    <p>And that was it. That was how I was introduced to the Arsenal. I've been hooked ever since.</p>
+    <p>Being an Arsenal fan teaches you commitment and loyalty like nothing else. Years of "next season will be different", years of watching other teams lift trophies, years of believing anyway. It builds character. Or at least that's what I tell myself.</p>
+    <p>But this year, 2025/26? We're top of the league, nine points clear, and it finally feels like our season. This is the year we win the Premier League. I'm calling it.</p>
+</section>
+
+        <section>
+            <div class="section-label"></div>
+            <h2>Playing</h2>
+            <p>Playing football is a more recent passion. I came to it properly as an adult, which means I have enormous enthusiasm and am still building the skills to match. There's something brilliant about being a beginner at something physical: it's humbling in the best way, and every small improvement feels significant.</p>
+            <p>At York I played with the Biology department team and we won the intramural league four times. I also played in the FA Herefordshire Ladies League during the 2023/24 season, where we finished as runners-up. Running around a pitch with other people, chasing a ball with no particular scientific objective, is one of the most effective ways I know to switch off and just exist in the present moment.</p>
+        </section>
+
+<section class="alt-bg">
+            <div class="section-label"></div>
+            <h2>Photos</h2>
+                <div style="position:relative; max-width:800px; margin:0 auto; overflow:hidden; border-radius:12px;">
+                <div class="photo-gallery" id="photo-track" style="display:flex; transition:transform 0.5s ease;">
+                    <img src="images/football/footy.jpg" alt="Football" style="min-width:100%; height:450px; object-fit:cover; display:block; cursor:pointer;">
+                    <img src="images/football/footy1.jpg" alt="Football" style="min-width:100%; height:450px; object-fit:cover; display:block; cursor:pointer;">
+                    <img src="images/football/footy2.jpg" alt="Football" style="min-width:100%; height:450px; object-fit:cover; display:block; cursor:pointer;">
+                    <img src="images/football/footy4.jpg" alt="Football" style="min-width:100%; height:450px; object-fit:cover; display:block; cursor:pointer;">
+                </div>
+                <button onclick="photoGo(-1)" style="position:absolute; top:50%; left:12px; transform:translateY(-50%); background:rgba(255,255,255,0.85); border:none; width:40px; height:40px; border-radius:50%; font-size:18px; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.15);">&#8249;</button>
+                <button onclick="photoGo(1)" style="position:absolute; top:50%; right:12px; transform:translateY(-50%); background:rgba(255,255,255,0.85); border:none; width:40px; height:40px; border-radius:50%; font-size:18px; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.15);">&#8250;</button>
+            </div>
+            <div id="photo-dots" style="display:flex; justify-content:center; gap:8px; margin-top:16px;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="logowhite.png" alt="Charlay Wood" class="footer-logo-img">
+        <p>Copyright © C Wood</p>
+        <p style="font-size:12px; margin-top:5px; opacity:0.7;">No part of this website may be reproduced or distributed without prior written permission from the copyright owner.</p>
+    </footer>
+
+    <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; cursor:pointer; justify-content:center; align-items:center;">
+        <img id="lightbox-img" style="max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 8px 32px rgba(0,0,0,0.4);">
+    </div>
+
+    <script>
+    // Slideshow
+    const track = document.getElementById('photo-track');
+    const slides = track.querySelectorAll('img');
+    const dotsWrap = document.getElementById('photo-dots');
+    let current = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.style.cssText = 'width:8px; height:8px; border-radius:50%; border:none; background:#aaa; opacity:0.4; cursor:pointer; padding:0;';
+        if (i === 0) { dot.style.opacity = '1'; dot.style.background = '#40916C'; dot.style.transform = 'scale(1.3)'; }
+        dot.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(dot);
+    });
+
+    function goTo(i) {
+        current = ((i % slides.length) + slides.length) % slides.length;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dotsWrap.querySelectorAll('button').forEach((d, idx) => {
+            d.style.opacity = idx === current ? '1' : '0.4';
+            d.style.background = idx === current ? '#40916C' : '#aaa';
+            d.style.transform = idx === current ? 'scale(1.3)' : 'scale(1)';
+        });
+    }
+
+    function photoGo(dir) { goTo(current + dir); }
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+
+    document.querySelectorAll('.photo-gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+            document.getElementById('lightbox-img').src = img.src;
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    lightbox.addEventListener('click', () => { lightbox.style.display = 'none'; });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') lightbox.style.display = 'none'; });
+    </script>
+
+</body>
+</html>
