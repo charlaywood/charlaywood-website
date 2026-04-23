@@ -347,6 +347,9 @@ body.inner-page main { padding-bottom: 40px; }
 .talk-award::after { content: "Award"; position: absolute; top: 8px; right: 12px; background-color: var(--green-accent); color: white; font-size: 0.7em; font-weight: 600; padding: 3px 8px; border-radius: 100px; letter-spacing: 0.05em; }
 .achievements-links { padding-top: 40px; padding-bottom: 20px; }
 .achievements-link-buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
+.achievement-item.talk-award::after {content: attr(data-award); }
+.achievement-item[data-award="Conference Correspondent"]::after {   background-color: #9c6b1e ;}
+.achievement-item[data-award="Organiser"]::after {    background-color: #c0392b;}
 
 /* ══════════════════════════════════════════════
    SIMPLE PROJECT LINKS
