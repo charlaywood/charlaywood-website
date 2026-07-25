@@ -126,6 +126,8 @@ button:hover { background-color: var(--green-mid); transform: translateY(-2px); 
 .about-grid { display: grid; grid-template-columns: 1fr 220px; gap: 48px; align-items: start; }
 .about-main p { font-size: 0.97em; line-height: 1.8; }
 .about-ctas { display: flex; flex-direction: column; gap: 12px; }
+.about-ctas--row { flex-direction: row; flex-wrap: wrap; justify-content: center; max-width: 720px; margin: 0 auto; }
+.about-ctas--row .about-btn { flex: 1 1 150px; justify-content: center; }
 .about-btn { display: flex; align-items: center; gap: 12px; background-color: var(--cream-alt); border: 1.5px solid rgba(141,110,99,0.25); border-radius: 10px; padding: 14px 18px; text-decoration: none; color: var(--green-deep); font-size: 0.88em; font-weight: 500; transition: var(--transition); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .about-btn:hover { background-color: var(--green-pale); border-color: var(--green-accent); transform: translateX(4px); }
 .about-btn-icon { font-size: 1.1em; }
@@ -148,6 +150,7 @@ button:hover { background-color: var(--green-mid); transform: translateY(-2px); 
 .badge-plantae, .pub-type-badge[data-type="plantae"] { background-color: #E8F4FD; color: #1565C0; }
 .badge-other, .pub-type-badge[data-type="other"] { background-color: #FFF3E0; color: #E65100; }
 .badge-preprint, .pub-type-badge[data-type="preprint"] { background-color: #F3E5F5; color: #6A1B9A; }
+.badge-primary-research, .pub-type-badge[data-type="primary-research"] { background-color: #FFF3CD; color: #8A5A00; }
 .pub-filters { display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
 
 /* ── Loading States ── */
@@ -331,7 +334,7 @@ body.inner-page main { padding-bottom: 40px; }
 
 .achievement-cards, .talk-cards { display: grid; gap: 18px; margin-top: 10px; }
 .achievement-cards { grid-template-columns: repeat(3, 1fr); }
-.talk-cards { grid-template-columns: repeat(2, 1fr); }
+.talk-cards { grid-template-columns: repeat(3, 1fr); }
 .achievement-card, .talk-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; background-color: var(--cream); border: 1.5px solid rgba(141,110,99,0.15); border-radius: 12px; overflow: hidden; transition: var(--transition); box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
 .achievement-card:hover, .talk-card:hover { transform: translateY(-4px); border-color: var(--green-accent); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
 .achievement-card-img, .talk-card-img { position: relative; width: 100%; padding-top: 62%; background: #1a1a1a; overflow: hidden; }
@@ -343,13 +346,13 @@ body.inner-page main { padding-bottom: 40px; }
 .achievement-card-desc, .talk-card-desc { font-size: 0.88em; color: var(--text-muted); line-height: 1.6; flex: 1; }
 .achievement-card-link, .talk-card-link { font-size: 0.85em; font-weight: 500; color: var(--green-accent); letter-spacing: 0.02em; }
 .talk-card-meta { font-size: 0.75em; color: var(--green-accent); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
-.talk-award { background-color: #E9F8F1; border: 2px solid var(--green-accent); box-shadow: 0 4px 14px rgba(64,145,108,0.15); position: relative; }
+.talk-award { position: relative; }
 .talk-award::after { content: "Award"; position: absolute; top: 8px; right: 12px; background-color: var(--green-accent); color: white; font-size: 0.7em; font-weight: 600; padding: 3px 8px; border-radius: 100px; letter-spacing: 0.05em; }
 .achievements-links { padding-top: 40px; padding-bottom: 20px; }
 .achievements-link-buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
 .achievement-item.talk-award::after {content: attr(data-award); }
 .achievement-item[data-award="Conference Correspondent"]::after {   background-color: #9c6b1e ;}
-.achievement-item[data-award="Organiser"]::after {    background-color: #c0392b;}
+.achievement-item[data-award="Workshop Facilitator"]::after {    background-color: #c0392b;}
 
 /* ══════════════════════════════════════════════
    SIMPLE PROJECT LINKS
@@ -414,7 +417,7 @@ footer { text-align: center; padding: 40px 30px; background-color: rgba(27,67,50
     .about-grid, .content-platforms { grid-template-columns: 1fr; }
     .travel-placeholder-grid { grid-template-columns: repeat(2, 1fr); }
     .blog-grid, .life-cards-grid, .achievement-cards { grid-template-columns: 1fr; }
-    .talk-cards { grid-template-columns: 1fr; }
+    .talk-cards { grid-template-columns: repeat(2, 1fr); }
     .platform-showcase { flex-direction: column; }
     .platform-showcase-info { flex: 0 0 auto; }
     .inner-hero { padding: 60px 24px 40px; }
@@ -428,4 +431,5 @@ footer { text-align: center; padding: 40px 30px; background-color: rgba(27,67,50
 @media (max-width: 480px) {
     .games-grid { grid-template-columns: 1fr; }
     .video-card-grid { grid-template-columns: 1fr; }
+    .talk-cards { grid-template-columns: 1fr; }
 }

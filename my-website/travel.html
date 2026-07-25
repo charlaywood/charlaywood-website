@@ -334,6 +334,20 @@
                     <div class="travel-card-label"><h3>Denmark</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/dk.png" alt=""></div></div>
                 </a>
 
+                <a href="#" class="travel-card" data-country="estonia" data-has-map="true" data-continent="europe">
+                    <span class="travel-card-badge badge-europe">Europe</span>
+                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/ee.png" alt="Estonia flag"></div>
+                    <div class="travel-card-overlay"></div>
+                    <div class="travel-card-label"><h3>Estonia</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/ee.png" alt=""></div></div>
+                </a>
+
+                <a href="#" class="travel-card" data-country="finland" data-has-map="true" data-continent="europe">
+                    <span class="travel-card-badge badge-europe">Europe</span>
+                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/fi.png" alt="Finland flag"></div>
+                    <div class="travel-card-overlay"></div>
+                    <div class="travel-card-label"><h3>Finland</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/fi.png" alt=""></div></div>
+                </a>
+
                 <a href="#" class="travel-card" data-country="france" data-has-map="true" data-continent="europe">
                     <span class="travel-card-badge badge-europe">Europe</span>
                     <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/fr.png" alt="France flag"></div>
@@ -362,11 +376,25 @@
                     <div class="travel-card-label"><h3>Hong Kong</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/hk.png" alt=""></div></div>
                 </a>
 
+                <a href="#" class="travel-card" data-country="southkorea" data-has-map="true" data-continent="asia">
+                    <span class="travel-card-badge badge-asia">Asia</span>
+                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/kr.png" alt="South Korea flag"></div>
+                    <div class="travel-card-overlay"></div>
+                    <div class="travel-card-label"><h3>South Korea</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/kr.png" alt=""></div></div>
+                </a>
+
                 <a href="#" class="travel-card" data-country="hungary" data-has-map="true" data-continent="europe">
                     <span class="travel-card-badge badge-europe">Europe</span>
                     <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/hu.png" alt="Hungary flag"></div>
                     <div class="travel-card-overlay"></div>
                     <div class="travel-card-label"><h3>Hungary</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/hu.png" alt=""></div></div>
+                </a>
+
+                <a href="#" class="travel-card" data-country="iceland" data-has-map="true" data-continent="europe">
+                    <span class="travel-card-badge badge-europe">Europe</span>
+                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/is.png" alt="Iceland flag"></div>
+                    <div class="travel-card-overlay"></div>
+                    <div class="travel-card-label"><h3>Iceland</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/is.png" alt=""></div></div>
                 </a>
 
                 <a href="#" class="travel-card" data-country="india" data-has-map="true" data-continent="asia">
@@ -636,6 +664,13 @@
       denmark: { name:"Denmark", flagCode:"dk", center:[55.68,12.57], zoom:8, subtitle:"1 city visited", cities:[
         { name:"Copenhagen", lat:55.6761, lng:12.5683, blog:"", year:"2020" },
       ]},
+      estonia: { name:"Estonia", flagCode:"ee", center:[58.6,25.4], zoom:7, subtitle:"2 cities visited", cities:[
+        { name:"Tartu",    lat:58.3780, lng:26.7290, blog:"", year:"2026" },
+        { name:"Tallinn",  lat:59.4370, lng:24.7536, blog:"", year:"2026" },
+      ]},
+      finland: { name:"Finland", flagCode:"fi", center:[60.17,24.94], zoom:8, subtitle:"1 city visited", cities:[
+        { name:"Helsinki", lat:60.1699, lng:24.9384, blog:"", year:"2026" },
+      ]},
       france: { name:"France", flagCode:"fr", center:[46.5,2.5], zoom:6, subtitle:"2 cities visited", cities:[
         { name:"Paris",    lat:48.8566, lng:2.3522, blog:"", year:"2008, 2013, 2015, 2022" },
         { name:"Toulouse", lat:43.6047, lng:1.4442, blog:"", year:"2019" },
@@ -655,8 +690,14 @@
       hongkong: { name:"Hong Kong", flagCode:"hk", center:[22.35,114.13], zoom:11, subtitle:"1 destination visited", cities:[
         { name:"Hong Kong", lat:22.3193, lng:114.1694, blog:"", year:"2018" },
       ]},
+      southkorea: { name:"South Korea", flagCode:"kr", center:[37.5665,126.9780], zoom:9, subtitle:"1 city visited", cities:[
+        { name:"Seoul", lat:37.5665, lng:126.9780, blog:"", year:"2026" },
+      ]},
       hungary: { name:"Hungary", flagCode:"hu", center:[47.5,19.1], zoom:8, subtitle:"1 city visited", cities:[
         { name:"Budapest", lat:47.4979, lng:19.0402, blog:"", year:"2015" },
+      ]},
+      iceland: { name:"Iceland", flagCode:"is", center:[64.1466,-21.9426], zoom:9, subtitle:"1 city visited", cities:[
+        { name:"Reykjavik", lat:64.1466, lng:-21.9426, blog:"", year:"2026" },
       ]},
       india: { name:"India", flagCode:"in", center:[24.5,74.0], zoom:6, subtitle:"6 cities visited", cities:[
         { name:"New Delhi", lat:28.6139, lng:77.2090, blog:"", year:"2019" },
@@ -763,9 +804,10 @@
         { name:"Hvar",      lat:43.1729, lng:16.4413, blog:"", year:"2016" },
         { name:"Dubrovnik", lat:42.6507, lng:18.0944, blog:"", year:"2016" },
       ]},
-      canada: { name:"Canada", flagCode:"ca", center:[56.0,-96.0], zoom:4, subtitle:"2 cities visited", cities:[
+      canada: { name:"Canada", flagCode:"ca", center:[56.0,-96.0], zoom:4, subtitle:"3 cities visited", cities:[
         { name:"Toronto",       lat:43.6532, lng:-79.3832, blog:"", year:"2023, 2025" },
         { name:"Niagara Falls", lat:43.0962, lng:-79.0377, blog:"", year:"2023" },
+        { name:"Ottawa",        lat:45.4215, lng:-75.6972, blog:"", year:"2026" },
       ]},
       usa: { name:"USA", flagCode:"us", center:[39.5,-98.35], zoom:4, subtitle:"15 cities across 19 states (some I did just drive through/stopped for lunch only",
         visitedStates:["NY","PA","DC","VA","NC","GA","FL","CA","WI","IL","MN","MI","IA","NJ","SC","HI","MD","DE","WV"],
@@ -826,12 +868,13 @@
     const COUNTRY_ISO = {
       albania:"Albania", argentina:"Argentina", austria:"Austria", belgium:"Belgium",
       bosnia:"Bosnia and Herzegovina", bulgaria:"Bulgaria", canada:"Canada", china:"China",
-      czech:"Czech Republic", denmark:"Denmark", france:"France", germany:"Germany",
+      czech:"Czech Republic", denmark:"Denmark", estonia:"Estonia", finland:"Finland",
+      france:"France", germany:"Germany", iceland:"Iceland",
       greece:"Greece", hungary:"Hungary", india:"India", italy:"Italy", jamaica:"Jamaica",
       lithuania:"Lithuania", montenegro:"Montenegro", morocco:"Morocco",
       northmacedonia:"North Macedonia", netherlands:"Netherlands", croatia:"Croatia",
       thailand:"Thailand", peru:"Peru", portugal:"Portugal", scotland:"United Kingdom",
-      serbia:"Serbia", slovakia:"Slovakia", spain:"Spain", taiwan:"Taiwan",
+      serbia:"Serbia", slovakia:"Slovakia", southkorea:"South Korea", spain:"Spain", taiwan:"Taiwan",
       usa:"United States of America", vietnam:"Vietnam",
     };
 
@@ -848,10 +891,13 @@
       china:          ["Russia","Mongolia","Kazakhstan","Kyrgyzstan","Tajikistan","Afghanistan","Pakistan","India","Nepal","Bhutan","Myanmar","Laos","Vietnam","North Korea"],
       czech:          ["Germany","Poland","Slovakia","Austria"],
       denmark:        ["Germany"],
+      estonia:        ["Latvia","Russia"],
+      finland:        ["Sweden","Norway","Russia"],
       france:         ["Belgium","Luxembourg","Germany","Switzerland","Italy","Monaco","Spain","Andorra"],
       germany:        ["Denmark","Poland","Czech Republic","Austria","Switzerland","France","Luxembourg","Belgium","Netherlands"],
       greece:         ["Albania","North Macedonia","Bulgaria","Turkey"],
       hungary:        ["Austria","Slovakia","Ukraine","Romania","Serbia","Croatia","Slovenia"],
+      iceland:        [],
       india:          ["Pakistan","China","Nepal","Bhutan","Bangladesh","Myanmar"],
       italy:          ["France","Switzerland","Austria","Slovenia","San Marino","Vatican"],
       jamaica:        [],
@@ -865,6 +911,7 @@
       scotland:       ["Ireland"],
       serbia:         ["Hungary","Romania","Bulgaria","North Macedonia","Kosovo","Montenegro","Bosnia and Herzegovina","Croatia"],
       slovakia:       ["Czech Republic","Poland","Ukraine","Hungary","Austria"],
+      southkorea:     ["North Korea"],
       spain:          ["Portugal","France","Andorra","Morocco"],
       taiwan:         [],
       usa:            ["Canada","Mexico"],
@@ -933,979 +980,8 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMapModal(); closeWorldMap(); } });
 
     // ── WORLD MAP ──
-    const VISITED_ADULT = new Set(["<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel | Charlay Wood</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="logonone.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-
-    <style>
-        .travel-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 16px;
-            margin-top: 8px;
-        }
-        @media (max-width: 600px) {
-            .travel-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        }
-        .travel-card {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            aspect-ratio: 3/4;
-            display: block;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            transition: transform 0.28s ease, box-shadow 0.28s ease;
-            background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
-            cursor: pointer;
-        }
-        .travel-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0,0,0,0.32); }
-        .travel-card[data-has-map="true"]::after {
-            content: "🗺";
-            position: absolute; top: 10px; right: 10px;
-            font-size: 0.9em; z-index: 6;
-            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5));
-        }
-        .travel-card-flag-bg {
-            position: absolute; inset: 0;
-            display: flex; align-items: center; justify-content: center; z-index: 2;
-        }
-        .travel-card-flag-bg img { width: 72px; border-radius: 4px; box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
-        .travel-card-overlay {
-            position: absolute; inset: 0;
-            background: linear-gradient(to top, rgba(27,67,50,0.88) 0%, rgba(27,67,50,0.05) 55%, transparent 100%);
-            z-index: 3;
-        }
-        .travel-card-badge {
-            position: absolute; top: 10px; left: 10px;
-            z-index: 5; font-size: 0.65em; font-weight: 600;
-            letter-spacing: 0.06em; text-transform: uppercase;
-            padding: 3px 8px; border-radius: 20px;
-        }
-        .badge-south-america { background: #FFF3E0; color: #E65100; }
-        .badge-europe        { background: #E8F4FD; color: #1565C0; }
-        .badge-caribbean     { background: #E8F5E9; color: #2E7D32; }
-        .badge-asia          { background: #F3E5F5; color: #6A1B9A; }
-        .badge-africa        { background: #FFF8E1; color: #F57F17; }
-        .badge-north-america { background: #E3F2FD; color: #0D47A1; }
-        .badge-oceania       { background: #FCE4EC; color: #880E4F; }
-        .travel-card-label {
-            position: absolute; bottom: 0; left: 0; right: 0;
-            padding: 16px 16px 14px; color: white; z-index: 4;
-            display: flex; align-items: flex-end; justify-content: space-between;
-        }
-        .travel-card-label h3 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 1.25em; font-weight: 600; margin: 0; line-height: 1.1;
-        }
-        .travel-card-label-flag img { width: 24px; border-radius: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.4); opacity: 0.9; }
-
-        /* Stats */
-        .stat-pill { display: flex; flex-direction: row; align-items: baseline; justify-content: flex-end; gap: 5px; }
-        .stat-number {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 1.6em; font-weight: 600; color: var(--green-accent); line-height: 1;
-        }
-        .stat-label { font-size: 0.78em; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
-
-        /* Map modal */
-        .map-modal-backdrop {
-            display: none; position: fixed; inset: 0;
-            background: rgba(10,25,17,0.82); backdrop-filter: blur(6px);
-            z-index: 2000; align-items: center; justify-content: center; padding: 24px;
-        }
-        .map-modal-backdrop.open { display: flex; animation: modalFadeIn 0.25s ease forwards; }
-        @keyframes modalFadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .map-modal {
-            background: #fff; border-radius: 20px; overflow: hidden;
-            width: 100%; max-width: 900px; max-height: 90vh;
-            display: flex; flex-direction: column;
-            box-shadow: 0 32px 80px rgba(0,0,0,0.5);
-            animation: modalSlideUp 0.3s ease forwards;
-        }
-        @keyframes modalSlideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        .map-modal-header {
-            background: var(--green-deep); padding: 20px 28px;
-            display: flex; align-items: center; justify-content: space-between;
-            border-bottom: 3px solid var(--green-accent); flex-shrink: 0;
-        }
-        .map-modal-header-left { display: flex; align-items: center; gap: 14px; }
-        .map-modal-flag { width: 40px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
-        .map-modal-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.8em; font-weight: 600; color: white; margin: 0; }
-        .map-modal-subtitle { font-size: 0.8em; color: rgba(183,228,199,0.8); margin: 2px 0 0; letter-spacing: 0.05em; }
-        .map-modal-close {
-            background: rgba(255,255,255,0.12); border: 1.5px solid rgba(255,255,255,0.25);
-            color: white; width: 36px; height: 36px; border-radius: 50%; font-size: 1.1em;
-            cursor: pointer; display: flex; align-items: center; justify-content: center;
-            transition: background 0.2s; flex-shrink: 0;
-        }
-        .map-modal-close:hover { background: rgba(255,255,255,0.25); }
-        .map-modal-body { flex: 1; overflow: hidden; position: relative; }
-        #modal-map { width: 100%; height: 520px; }
-        .map-modal-footer {
-            background: #f8f6f2; padding: 12px 20px;
-            border-top: 1px solid rgba(141,110,99,0.15);
-            font-size: 0.78em; color: var(--text-muted);
-            display: flex; align-items: center; gap: 8px; flex-shrink: 0;
-        }
-        .map-modal-footer a { color: var(--green-accent); text-decoration: none; font-weight: 500; }
-        .map-modal-footer a:hover { text-decoration: underline; }
-
-        /* Popups */
-        .leaflet-popup-content-wrapper { border-radius: 12px !important; box-shadow: 0 8px 32px rgba(0,0,0,0.2) !important; border: none !important; padding: 0 !important; overflow: hidden; }
-        .leaflet-popup-content { margin: 0 !important; min-width: 180px; }
-        .leaflet-popup-tip-container { display: none; }
-        .city-popup { padding: 16px 18px 14px; }
-        .city-popup-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15em; font-weight: 600; color: var(--green-deep); margin: 0 0 4px; }
-        .city-popup-year { font-size: 0.82em; color: #888; margin: 0 0 12px; line-height: 1.4; }
-        .city-popup-link { display: inline-block; background: var(--green-accent); color: white !important; padding: 6px 14px; border-radius: 6px; font-size: 0.8em; font-weight: 500; text-decoration: none; transition: background 0.2s; }
-        .city-popup-link:hover { background: var(--green-deep); color: white !important; }
-        .city-pin { width: 28px; height: 28px; background: var(--green-accent); border: 3px solid white; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); box-shadow: 0 3px 12px rgba(0,0,0,0.3); transition: transform 0.2s, background 0.2s; }
-        .city-pin:hover { background: var(--green-deep); transform: rotate(-45deg) scale(1.2); }
-
-        /* Tooltips */
-        .country-tooltip { background: rgba(27,67,50,0.92); border: none; color: white; font-family: 'DM Sans', sans-serif; font-size: 0.8em; font-weight: 500; padding: 5px 10px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
-        .country-tooltip::before { display: none; }
-        .country-tooltip-plain { background: rgba(60,50,40,0.85); border: none; color: #f0ede8; font-family: 'DM Sans', sans-serif; font-size: 0.78em; padding: 4px 9px; border-radius: 5px; }
-        .country-tooltip-plain::before { display: none; }
-        .country-tooltip-child { background: rgba(45,106,79,0.88); border: none; color: white; font-family: 'DM Sans', sans-serif; font-size: 0.78em; padding: 5px 10px; border-radius: 6px; }
-        .country-tooltip-child::before { display: none; }
-
-        /* World map button */
-        .world-map-btn {
-            background: var(--green-deep); color: white; border: none;
-            padding: 10px 20px; border-radius: 8px;
-            font-family: 'DM Sans', sans-serif; font-size: 0.88em; font-weight: 500;
-            cursor: pointer; display: flex; align-items: center; gap: 8px;
-            transition: 0.28s ease; box-shadow: 0 4px 12px rgba(27,67,50,0.25); white-space: nowrap;
-        }
-        .world-map-btn:hover { background: var(--green-accent); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(27,67,50,0.35); }
-
-        /* World modal */
-        .world-modal-backdrop {
-            display: none; position: fixed; inset: 0;
-            background: rgba(10,25,17,0.85); backdrop-filter: blur(6px);
-            z-index: 2100; align-items: center; justify-content: center; padding: 24px;
-        }
-        .world-modal-backdrop.open { display: flex; animation: modalFadeIn 0.25s ease forwards; }
-        .world-modal { background: #fff; border-radius: 20px; overflow: hidden; width: 100%; max-width: 1100px; max-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 32px 80px rgba(0,0,0,0.5); animation: modalSlideUp 0.3s ease forwards; }
-        .world-modal-header { background: var(--green-deep); padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid var(--green-accent); flex-shrink: 0; }
-        .world-modal-header-left { display: flex; flex-direction: column; gap: 2px; }
-        .world-modal-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.6em; font-weight: 600; color: white; margin: 0; }
-        .world-modal-subtitle { font-size: 0.78em; color: rgba(183,228,199,0.8); letter-spacing: 0.04em; }
-        #world-map { width: 100%; height: 560px; }
-
-        @media (max-width: 700px) {
-            #world-map { height: 380px; }
-            .map-modal { max-height: 95vh; }
-            #modal-map { height: 380px; }
-            .map-modal-title { font-size: 1.4em; }
-        }
-    </style>
-</head>
-<body class="inner-page">
-
-    <a href="#main" class="skip-link">Skip to content</a>
-
-    <nav>
-        <a href="index.html" class="nav-logo">
-            <img src="logowhite.png" alt="Charlay Wood" class="nav-logo-img">
-            <span class="nav-logo-name">Charlay Wood</span>
-        </a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="science.html">Science</a>
-            <a href="content.html">Content</a>
-            <a href="travel.html" class="nav-active">Travel</a>
-            <div class="dropdown">
-                <a class="dropbtn">Life ▾</a>
-                <div class="dropdown-content"><div class="dropdown-content-inner">
-                    <a href="life/tango.html">Argentine Tango</a>
-                    <a href="life/football.html">Sports</a>
-                    <a href="life/languages.html">Languages</a>
-                </div></div>
-            </div>
-            <a href="https://blog.charlaywood.com/">Blog</a>
-            <a href="index.html#connect">Connect</a>
-        </div>
-    </nav>
-
-    <div class="inner-hero">
-        <div class="inner-hero-content">
-            <p class="hero-eyebrow">Places · People · Adventures</p>
-            <h1 class="inner-hero-title">Travel ✈️</h1>
-            <p class="inner-hero-sub">Exploring the world and taking my curiosity across the globe. Every journey is an education in itself.</p>
-        </div>
-    </div>
-
-    <main id="main">
-        <section>
-
-           <!-- Title + World Map button -->
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
-                <div>
-                    <div class="section-label">Destinations</div>
-                    <h2 style="margin-bottom:0;">Places I've Been</h2>
-                </div>
-                <div style="display:flex; flex-direction:column; align-items:flex-end; gap:10px;">
-                    <button class="world-map-btn" onclick="openWorldMap()">🌍 World Map</button>
-                    <div id="travel-stats" style="display:flex; align-items:baseline; gap:20px;"></div>
-                </div>
-            </div>
-
-            <p>Click any destination to read stories from the trip. And airport layovers don't count!</p>
-            <p style="font-size:0.8em; color:var(--text-muted); font-style:italic; margin-top:-8px; padding:10px 14px; background:var(--cream-alt); border-radius:8px; border-left:3px solid var(--brown-light);">
-                🗺 Maps are generated using open-source geographic data and are for illustrative purposes only. They do not express any position on the naming, sovereignty, or borders of any country or territory.
-            </p>
-
-            <!-- Filter bar + World Map -->
-            <div class="filter-bar" style="margin:20px 0 24px; display:flex; flex-wrap:wrap; gap:6px; align-items:center;">
-                <button class="filter-btn active" onclick="filterTravel('all', this)">All</button>
-		<button class="filter-btn" onclick="filterTravel('africa', this)">Africa</button>
-		<button class="filter-btn" onclick="filterTravel('asia', this)">Asia</button>
-		<button class="filter-btn" onclick="filterTravel('caribbean', this)">Caribbean</button>
-		<button class="filter-btn" onclick="filterTravel('europe', this)">Europe</button>
-		<button class="filter-btn" onclick="filterTravel('north-america', this)">North America</button>
-		<button class="filter-btn" onclick="filterTravel('oceania', this)">Oceania</button>
-                <button class="filter-btn" onclick="filterTravel('south-america', this)">South America</button>
-             </div>
-
-            <div class="travel-grid" id="travel-grid">
-
-                <a href="#" class="travel-card" data-country="albania" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/al.png" alt="Albania flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Albania</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/al.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="argentina" data-has-map="true" data-continent="south-america">
-                    <span class="travel-card-badge badge-south-america">South America</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/ar.png" alt="Argentina flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Argentina</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/ar.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="austria" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/at.png" alt="Austria flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Austria</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/at.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="barbados" data-has-map="true" data-continent="caribbean">
-                    <span class="travel-card-badge badge-caribbean">Caribbean</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/bb.png" alt="Barbados flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Barbados</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/bb.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="belgium" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/be.png" alt="Belgium flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Belgium</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/be.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="bosnia" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/ba.png" alt="Bosnia flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Bosnia &amp; Herzegovina</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/ba.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="bulgaria" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/bg.png" alt="Bulgaria flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Bulgaria</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/bg.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-continent="europe" data-country="croatia" data-has-map="true">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/hr.png" alt="Croatia flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Croatia</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/hr.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-continent="north-america" data-country="canada" data-has-map="true">
-                    <span class="travel-card-badge badge-north-america">North America</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/ca.png" alt="Canada flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Canada</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/ca.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="china" data-has-map="true" data-continent="asia">
-                    <span class="travel-card-badge badge-asia">Asia</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/cn.png" alt="China flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>China</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/cn.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="czech" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/cz.png" alt="Czech flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Czech Republic</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/cz.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="denmark" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/dk.png" alt="Denmark flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Denmark</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/dk.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="france" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/fr.png" alt="France flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>France</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/fr.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="germany" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/de.png" alt="Germany flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Germany</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/de.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="greece" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/gr.png" alt="Greece flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Greece</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/gr.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="hongkong" data-has-map="true" data-continent="asia">
-                    <span class="travel-card-badge badge-asia">Asia</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/hk.png" alt="Hong Kong flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Hong Kong</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/hk.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="hungary" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/hu.png" alt="Hungary flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Hungary</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/hu.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="india" data-has-map="true" data-continent="asia">
-                    <span class="travel-card-badge badge-asia">Asia</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/in.png" alt="India flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>India</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/in.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="italy" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/it.png" alt="Italy flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Italy</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/it.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="jamaica" data-has-map="true" data-continent="caribbean">
-                    <span class="travel-card-badge badge-caribbean">Caribbean</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/jm.png" alt="Jamaica flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Jamaica</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/jm.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="lithuania" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/lt.png" alt="Lithuania flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Lithuania</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/lt.png" alt=""></div></div>
-                </a>
-
-                 <a href="#" class="travel-card" data-country="luxembourg" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/lu.png" alt="Luxembourg flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Luxembourg</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/lu.png" alt=""></div></div>
-                </a>
- 
-		<a href="#" class="travel-card" data-country="monaco" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/mc.png" alt="Monaco flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Monaco</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/mc.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="montenegro" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/me.png" alt="Montenegro flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Montenegro</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/me.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-continent="europe" data-country="northmacedonia" data-has-map="true">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/mk.png" alt="North Macedonia flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>North Macedonia</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/mk.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="morocco" data-has-map="true" data-continent="africa">
-                    <span class="travel-card-badge badge-africa">Africa</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/ma.png" alt="Morocco flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Morocco</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/ma.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="netherlands" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/nl.png" alt="Netherlands flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Netherlands</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/nl.png" alt=""></div></div>
-                </a>
-
-                 <a href="#" class="travel-card" data-country="stkitts" data-has-map="true" data-continent="caribbean">
-                    <span class="travel-card-badge badge-caribbean">Caribbean</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/kn.png" alt="St Kitts and Nevis flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>St Kitts &amp; Nevis</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/kn.png" alt=""></div></div>
-                </a>
-
-               <a href="#" class="travel-card" data-country="stbarts" data-has-map="true" data-continent="caribbean">
-                    <span class="travel-card-badge badge-caribbean">Caribbean</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/bl.png" alt="St Barts flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>St Barts</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/bl.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="peru" data-has-map="true" data-continent="south-america">
-                    <span class="travel-card-badge badge-south-america">South America</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/pe.png" alt="Peru flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Peru</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/pe.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="portugal" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/pt.png" alt="Portugal flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Portugal</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/pt.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="scotland" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/gb-sct.png" alt="Scotland flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Scotland</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/gb-sct.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="serbia" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/rs.png" alt="Serbia flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Serbia</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/rs.png" alt=""></div></div>
-                </a>
-
-                   <a href="#" class="travel-card" data-country="singapore" data-has-map="true" data-continent="asia">
-                    <span class="travel-card-badge badge-asia">Asia</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/sg.png" alt="Singapore flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Singapore</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/sg.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="slovakia" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/sk.png" alt="Slovakia flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Slovakia</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/sk.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="spain" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/es.png" alt="Spain flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Spain</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/es.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="taiwan" data-has-map="true" data-continent="asia">
-                    <span class="travel-card-badge badge-asia">Asia</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/tw.png" alt="Taiwan flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Taiwan</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/tw.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-continent="asia" data-country="thailand" data-has-map="true">
-                    <span class="travel-card-badge badge-asia">Asia</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/th.png" alt="Thailand flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Thailand</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/th.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="usa" data-has-map="true" data-continent="north-america">
-                    <span class="travel-card-badge badge-north-america">North America</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/us.png" alt="USA flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>USA</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/us.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="vatican" data-has-map="true" data-continent="europe">
-                    <span class="travel-card-badge badge-europe">Europe</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/va.png" alt="Vatican flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Vatican</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/va.png" alt=""></div></div>
-                </a>
-
-                <a href="#" class="travel-card" data-country="vietnam" data-has-map="true" data-continent="asia">
-                    <span class="travel-card-badge badge-asia">Asia</span>
-                    <div class="travel-card-flag-bg"><img src="https://flagcdn.com/w80/vn.png" alt="Vietnam flag"></div>
-                    <div class="travel-card-overlay"></div>
-                    <div class="travel-card-label"><h3>Vietnam</h3><div class="travel-card-label-flag"><img src="https://flagcdn.com/w40/vn.png" alt=""></div></div>
-                </a>
-
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <img src="logowhite.png" alt="Charlay Wood" class="footer-logo-img">
-        <p>Copyright © C Wood</p>
-        <p style="font-size:12px; margin-top:5px; opacity:0.7;">No part of this website may be reproduced or distributed without prior written permission from the copyright owner.</p>
-    </footer>
-
-    <!-- WORLD MAP MODAL -->
-    <div class="world-modal-backdrop" id="worldModalBackdrop">
-        <div class="world-modal">
-            <div class="world-modal-header">
-                <div class="world-modal-header-left">
-                    <h2 class="world-modal-title">🌍 Countries I've Visited</h2>
-                    <p class="world-modal-subtitle" id="worldCountCount"></p>
-                </div>
-                <button class="map-modal-close" onclick="closeWorldMap()" aria-label="Close">✕</button>
-            </div>
-            <div style="flex:1; overflow:hidden;"><div id="world-map"></div></div>
-            <div class="map-modal-footer">
-                <span>🟢 Countries visited &nbsp;·&nbsp; 🟩 Childhood travels &nbsp;|&nbsp; Hover to see country name</span>
-                <span style="margin-left:auto;">Map: <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a></span>
-            </div>
-        </div>
-    </div>
-
-    <!-- COUNTRY MAP MODAL -->
-    <div class="map-modal-backdrop" id="mapModalBackdrop">
-        <div class="map-modal" id="mapModal">
-            <div class="map-modal-header">
-                <div class="map-modal-header-left">
-                    <img class="map-modal-flag" id="modalFlag" src="" alt="">
-                    <div>
-                        <h2 class="map-modal-title" id="modalTitle"></h2>
-                        <p class="map-modal-subtitle" id="modalSubtitle"></p>
-                    </div>
-                </div>
-                <button class="map-modal-close" id="mapModalClose" aria-label="Close">✕</button>
-            </div>
-            <div class="map-modal-body"><div id="modal-map"></div></div>
-            <div class="map-modal-footer">
-                <span>📍 Click a pin to see trip details</span>
-                <span style="margin-left:auto;">Map: <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a></span>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-    <script>
-    const TRAVEL_DATA = {
-      albania: { name:"Albania", flagCode:"al", center:[41.0,20.1], zoom:7, subtitle:"3 cities visited", cities:[
-        { name:"Tirana",      lat:41.3275, lng:19.8187, blog:"https://blog.charlaywood.com/2023/10/07/albania", year:"2023" },
-        { name:"Gjirokastër", lat:40.0758, lng:20.1389, blog:"https://blog.charlaywood.com/2023/10/07/albania", year:"2023" },
-        { name:"Sarandë",     lat:39.8756, lng:20.0053, blog:"https://blog.charlaywood.com/2023/10/07/albania", year:"2023" },
-      ]},
-      argentina: { name:"Argentina", flagCode:"ar", center:[-30.0,-64.0], zoom:4, subtitle:"3 cities visited", cities:[
-        { name:"Buenos Aires",          lat:-34.6037, lng:-58.3816, blog:"https://blog.charlaywood.com/2026/01/04/buenos-aires-2-0", year:"2018, 2026" },
-        { name:"Salta",                 lat:-24.7821, lng:-65.4232, blog:"", year:"2018" },
-        { name:"San Salvador de Jujuy", lat:-24.1858, lng:-65.2995, blog:"", year:"2018" },
-      ]},
-      austria: { name:"Austria", flagCode:"at", center:[47.5,13.5], zoom:7, subtitle:"2 cities visited", cities:[
-        { name:"Vienna",   lat:48.2082, lng:16.3738, blog:"", year:"2022" },
-        { name:"Salzburg", lat:47.8095, lng:13.0550, blog:"", year:"2022" },
-      ]},
-      barbados: { name:"Barbados", flagCode:"bb", center:[13.18,-59.55], zoom:11, subtitle:"1 destination visited", cities:[
-        { name:"Bridgetown", lat:13.0969, lng:-59.6145, blog:"", year:"2008" },
-      ]},
-      belgium: { name:"Belgium", flagCode:"be", center:[50.85,4.35], zoom:8, subtitle:"1 city visited", cities:[
-        { name:"Brussels", lat:50.8503, lng:4.3517, blog:"", year:"2013, 2015" },
-      ]},
-      bosnia: { name:"Bosnia & Herzegovina", flagCode:"ba", center:[43.9,17.7], zoom:7, subtitle:"2 cities visited", cities:[
-        { name:"Sarajevo", lat:43.8563, lng:18.4131, blog:"", year:"2023" },
-        { name:"Mostar",   lat:43.3438, lng:17.8078, blog:"", year:"2023" },
-      ]},
-      bulgaria: { name:"Bulgaria", flagCode:"bg", center:[42.7,23.3], zoom:8, subtitle:"1 city visited", cities:[
-        { name:"Sofia", lat:42.6977, lng:23.3219, blog:"", year:"2023" },
-      ]},
-      china: { name:"China", flagCode:"cn", center:[35.5,104.0], zoom:4, subtitle:"12 cities visited", cities:[
-        { name:"Shanghai",  lat:31.2304, lng:121.4737, blog:"", year:"2007, 2014, 2017, 2018" },
-        { name:"Beijing",   lat:39.9042, lng:116.4074, blog:"", year:"2007, 2018" },
-        { name:"Xi'an",     lat:34.3416, lng:108.9398, blog:"", year:"2014" },
-        { name:"Kunming",   lat:25.0389, lng:102.7183, blog:"", year:"2007, 2010, 2014, 2017, 2018" },
-        { name:"Wuxi",      lat:31.4912, lng:120.3119, blog:"", year:"2018" },
-        { name:"Hangzhou",  lat:30.2741, lng:120.1551, blog:"", year:"2018" },
-        { name:"Suzhou",    lat:31.2989, lng:120.5853, blog:"", year:"2018" },
-        { name:"Ningbo",    lat:29.8683, lng:121.5440, blog:"", year:"2018" },
-        { name:"Guangzhou", lat:23.1291, lng:113.2644, blog:"", year:"2017" },
-        { name:"Chongqing", lat:29.5630, lng:106.5516, blog:"", year:"2010" },
-        { name:"Nanjing",   lat:32.0603, lng:118.7969, blog:"", year:"2007" },
-        { name:"Guilin",    lat:25.2736, lng:110.2907, blog:"", year:"2010" },
-      ]},
-      czech: { name:"Czech Republic", flagCode:"cz", center:[50.08,14.44], zoom:8, subtitle:"1 city visited", cities:[
-        { name:"Prague", lat:50.0755, lng:14.4378, blog:"", year:"2021" },
-      ]},
-      denmark: { name:"Denmark", flagCode:"dk", center:[55.68,12.57], zoom:8, subtitle:"1 city visited", cities:[
-        { name:"Copenhagen", lat:55.6761, lng:12.5683, blog:"", year:"2020" },
-      ]},
-      france: { name:"France", flagCode:"fr", center:[46.5,2.5], zoom:6, subtitle:"2 cities visited", cities:[
-        { name:"Paris",    lat:48.8566, lng:2.3522, blog:"", year:"2008, 2013, 2015, 2022" },
-        { name:"Toulouse", lat:43.6047, lng:1.4442, blog:"", year:"2019" },
-      ]},
-      germany: { name:"Germany", flagCode:"de", center:[51.2,10.5], zoom:6, subtitle:"3 cities visited", cities:[
-        { name:"Berlin",     lat:52.5200, lng:13.4050, blog:"", year:"2011" },
-        { name:"Düsseldorf", lat:51.2217, lng:6.7762,  blog:"", year:"2016" },
-        { name:"Cologne",    lat:50.9333, lng:6.9500,  blog:"", year:"2016" },
-      ]},
-      greece: { name:"Greece", flagCode:"gr", center:[38.5,23.5], zoom:6, subtitle:"5 destinations including islands", cities:[
-        { name:"Thessaloniki", lat:40.6401, lng:22.9444, blog:"", year:"2021, 2022" },
-        { name:"Athens",       lat:37.9838, lng:23.7275, blog:"", year:"2016" },
-        { name:"Halkidiki",    lat:40.3200, lng:23.4500, blog:"", year:"2021, 2022" },
-        { name:"Corfu",        lat:39.6243, lng:19.9217, blog:"", year:"2017" },
-        { name:"Crete",        lat:35.2401, lng:24.8093, blog:"", year:"2022, 2025" },
-      ]},
-      hongkong: { name:"Hong Kong", flagCode:"hk", center:[22.35,114.13], zoom:11, subtitle:"1 destination visited", cities:[
-        { name:"Hong Kong", lat:22.3193, lng:114.1694, blog:"", year:"2018" },
-      ]},
-      hungary: { name:"Hungary", flagCode:"hu", center:[47.5,19.1], zoom:8, subtitle:"1 city visited", cities:[
-        { name:"Budapest", lat:47.4979, lng:19.0402, blog:"", year:"2015" },
-      ]},
-      india: { name:"India", flagCode:"in", center:[24.5,74.0], zoom:6, subtitle:"6 cities visited", cities:[
-        { name:"New Delhi", lat:28.6139, lng:77.2090, blog:"", year:"2019" },
-        { name:"Jaipur",    lat:26.9124, lng:75.7873, blog:"", year:"2019" },
-        { name:"Pushkar",   lat:26.4900, lng:74.5510, blog:"", year:"2019" },
-        { name:"Udaipur",   lat:24.5854, lng:73.7125, blog:"", year:"2019" },
-        { name:"Jodhpur",   lat:26.2389, lng:73.0243, blog:"", year:"2019" },
-        { name:"Agra",      lat:27.1767, lng:78.0081, blog:"", year:"2019" },
-      ]},
-      italy: { name:"Italy", flagCode:"it", center:[42.5,13.0], zoom:6, subtitle:"7 cities visited", cities:[
-        { name:"Rome",    lat:41.9028, lng:12.4964, blog:"", year:"2013, 2018" },
-        { name:"Salerno", lat:40.6824, lng:14.7681, blog:"", year:"2019" },
-        { name:"Bari",    lat:41.1171, lng:16.8719, blog:"", year:"2013" },
-        { name:"Pescara", lat:42.4618, lng:14.2155, blog:"", year:"2013" },
-        { name:"Rimini",  lat:44.0594, lng:12.5683, blog:"", year:"2013" },
-        { name:"Venice",  lat:45.4408, lng:12.3155, blog:"", year:"2023" },
-        { name:"Milan",   lat:45.4642, lng:9.1900,  blog:"", year:"2013" },
-      ]},
-      jamaica: { name:"Jamaica", flagCode:"jm", center:[18.15,-77.35], zoom:9, subtitle:"1 city visited", cities:[
-        { name:"Montego Bay", lat:18.4762, lng:-77.8939, blog:"", year:"2025" },
-      ]},
-      lithuania: { name:"Lithuania", flagCode:"lt", center:[54.69,25.28], zoom:9, subtitle:"1 city visited", cities:[
-        { name:"Vilnius", lat:54.6872, lng:25.2797, blog:"", year:"2022" },
-      ]},
-      luxembourg: { name:"Luxembourg", flagCode:"lu", center:[49.61,6.13], zoom:11, subtitle:"1 destination visited", cities:[
-        { name:"Luxembourg City", lat:49.6116, lng:6.1319, blog:"", year:"2013, 2015" },
-      ]},
-      monaco: { name:"Monaco", flagCode:"mc", center:[43.738,7.424], zoom:13, subtitle:"1 destination visited", cities:[
-        { name:"Monaco", lat:43.7384, lng:7.4246, blog:"", year:"2019" },
-      ]},
-      montenegro: { name:"Montenegro", flagCode:"me", center:[42.7,19.4], zoom:8, subtitle:"2 cities visited", cities:[
-        { name:"Podgorica", lat:42.4304, lng:19.2594, blog:"", year:"2023" },
-        { name:"Kotor",     lat:42.4247, lng:18.7712, blog:"", year:"2023" },
-      ]},
-      morocco: { name:"Morocco", flagCode:"ma", center:[31.63,-8.0], zoom:7, subtitle:"1 city visited", cities:[
-        { name:"Marrakesh", lat:31.6295, lng:-7.9811, blog:"", year:"2023" },
-      ]},
-      northmacedonia: { name:"North Macedonia", flagCode:"mk", center:[41.6,21.7], zoom:8, subtitle:"3 cities visited", cities:[
-        { name:"Skopje", lat:41.9973, lng:21.4280, blog:"", year:"2023" },
-        { name:"Ohrid",  lat:41.1231, lng:20.8016, blog:"", year:"2023" },
-        { name:"Prilep", lat:41.3453, lng:21.5525, blog:"", year:"2023" },
-      ]},
-      netherlands: { name:"The Netherlands", flagCode:"nl", center:[52.3,5.3], zoom:7, subtitle:"3 cities visited", cities:[
-        { name:"Amsterdam",  lat:52.3676, lng:4.9041, blog:"", year:"2013, 2023" },
-        { name:"Eindhoven",  lat:51.4416, lng:5.4697, blog:"", year:"2023" },
-        { name:"Maastricht", lat:50.8514, lng:5.6909, blog:"", year:"2019" },
-      ]},
-      peru: { name:"Peru", flagCode:"pe", center:[-12.5,-73.0], zoom:5, subtitle:"3 cities visited", cities:[
-        { name:"Lima",            lat:-12.0464, lng:-77.0428, blog:"https://blog.charlaywood.com/2025/12/30/lima-peru/", year:"2025" },
-        { name:"Cusco",           lat:-13.5320, lng:-71.9675, blog:"https://blog.charlaywood.com/2026/01/05/cusco-peru-🇵🇪/", year:"2025" },
-        { name:"Aguas Calientes", lat:-13.1533, lng:-72.5256, blog:"", year:"2025" },
-      ]},
-      portugal: { name:"Portugal", flagCode:"pt", center:[38.8,-8.5], zoom:7, subtitle:"2 cities visited", cities:[
-        { name:"Lisbon", lat:38.7223, lng:-9.1393, blog:"", year:"2023" },
-        { name:"Faro",   lat:37.0194, lng:-7.9322, blog:"", year:"2012" },
-      ]},
-      scotland: { name:"Scotland", flagCode:"gb-sct", center:[57.0,-4.5], zoom:6, subtitle:"9 destinations visited", cities:[
-        { name:"Edinburgh",              lat:55.9533, lng:-3.1883, blog:"", year:"2012" },
-        { name:"Glasgow",                lat:55.8642, lng:-4.2518, blog:"", year:"2023" },
-        { name:"Ben Nevis",              lat:56.7969, lng:-5.0037, blog:"", year:"2023" },
-        { name:"Pitlochry",              lat:56.7073, lng:-3.7334, blog:"", year:"2007, 2023" },
-        { name:"Inverness",              lat:57.4778, lng:-4.2247, blog:"", year:"2020" },
-        { name:"Durness",                lat:58.5671, lng:-4.7536, blog:"", year:"2013" },
-        { name:"Isle of Lewis & Harris", lat:58.0,    lng:-6.7,   blog:"", year:"2013" },
-        { name:"Isle of Arran",          lat:55.5844, lng:-5.2167, blog:"", year:"2011" },
-        { name:"Isle of Skye",           lat:57.2736, lng:-6.2149, blog:"", year:"2008" },
-      ]},
-      serbia: { name:"Serbia", flagCode:"rs", center:[43.5,21.0], zoom:7, subtitle:"2 cities visited", cities:[
-        { name:"Belgrade", lat:44.8176, lng:20.4569, blog:"", year:"2023" },
-        { name:"Niš",      lat:43.3209, lng:21.8954, blog:"", year:"2023" },
-      ]},
-      singapore: { name:"Singapore", flagCode:"sg", center:[1.352,103.82], zoom:11, subtitle:"1 destination visited", cities:[
-        { name:"Singapore", lat:1.3521, lng:103.8198, blog:"", year:"2018" },
-      ]},
-      slovakia: { name:"Slovakia", flagCode:"sk", center:[48.15,17.11], zoom:8, subtitle:"1 city visited", cities:[
-        { name:"Bratislava", lat:48.1486, lng:17.1077, blog:"", year:"2022" },
-      ]},
-      spain: { name:"Spain", flagCode:"es", center:[40.0,-3.5], zoom:6, subtitle:"3 cities visited", cities:[
-        { name:"Madrid",    lat:40.4168, lng:-3.7038, blog:"", year:"2017" },
-        { name:"Barcelona", lat:41.3851, lng:2.1734,  blog:"", year:"2010, 2017" },
-        { name:"Bilbao",    lat:43.2630, lng:-2.9350, blog:"", year:"2019" },
-      ]},
-      stkitts: { name:"St Kitts & Nevis", flagCode:"kn", center:[17.25,-62.68], zoom:11, subtitle:"1 destination visited", cities:[
-        { name:"Charlestown", lat:17.1333, lng:-62.61667, blog:"", year:"2008" },
-      ]},
-      stbarts: { name:"St Barts", flagCode:"bl", center:[17.9,-62.83], zoom:12, subtitle:"1 destination visited", cities:[
-        { name:"Gustavia", lat:17.8958, lng:-62.8508, blog:"", year:"2008" },
-      ]},
-      thailand: { name:"Thailand", flagCode:"th", center:[13.75,100.5], zoom:6, subtitle:"1 city visited", cities:[
-        { name:"Bangkok", lat:13.7563, lng:100.5018, blog:"", year:"2018" },
-      ]},
-      taiwan: { name:"Taiwan", flagCode:"tw", center:[23.7,121.0], zoom:7, subtitle:"1 city visited", cities:[
-        { name:"Taipei", lat:25.0330, lng:121.5654, blog:"", year:"2018" },
-      ]},
-      vatican: { name:"Vatican", flagCode:"va", center:[41.902,12.453], zoom:15, subtitle:"1 destination visited", cities:[
-        { name:"Vatican City", lat:41.9029, lng:12.4534, blog:"", year:"2013, 2018" },
-      ]},
-      vietnam: { name:"Vietnam", flagCode:"vn", center:[20.0,105.8], zoom:6, subtitle:"2 destinations visited", cities:[
-        { name:"Hanoi",       lat:21.0285, lng:105.8542, blog:"", year:"2018" },
-        { name:"Ha Long Bay", lat:20.9101, lng:107.1839, blog:"", year:"2018" },
-      ]},
-      croatia: { name:"Croatia", flagCode:"hr", center:[43.8,16.5], zoom:7, subtitle:"3 cities visited", cities:[
-        { name:"Split",     lat:43.5081, lng:16.4402, blog:"", year:"2016" },
-        { name:"Hvar",      lat:43.1729, lng:16.4413, blog:"", year:"2016" },
-        { name:"Dubrovnik", lat:42.6507, lng:18.0944, blog:"", year:"2016" },
-      ]},
-      canada: { name:"Canada", flagCode:"ca", center:[56.0,-96.0], zoom:4, subtitle:"2 cities visited", cities:[
-        { name:"Toronto",       lat:43.6532, lng:-79.3832, blog:"", year:"2023, 2025" },
-        { name:"Niagara Falls", lat:43.0962, lng:-79.0377, blog:"", year:"2023" },
-      ]},
-      usa: { name:"USA", flagCode:"us", center:[39.5,-98.35], zoom:4, subtitle:"15 cities across 19 states (some I did just drive through/stopped for lunch only",
-        visitedStates:["NY","PA","DC","VA","NC","GA","FL","CA","WI","IL","MN","MI","IA","NJ","SC","HI","MD","DE","WV"],
-        cities:[
-          { name:"New York City", lat:40.7128, lng:-74.0060,  blog:"", year:"2023, 2025" },
-          { name:"Washington DC", lat:38.9072, lng:-77.0369,  blog:"", year:"2023" },
-          { name:"Philadelphia",  lat:39.9526, lng:-75.1652,  blog:"", year:"2023" },
-          { name:"Roanoke",       lat:37.2710, lng:-79.9414,  blog:"", year:"2023" },
-          { name:"Cary",          lat:35.7915, lng:-78.7811,  blog:"", year:"2023" },
-          { name:"Savannah",      lat:32.0809, lng:-81.0912,  blog:"", year:"2023" },
-          { name:"Orlando",       lat:28.5383, lng:-81.3792,  blog:"", year:"2023" },
-          { name:"Miami",         lat:25.7617, lng:-80.1918,  blog:"", year:"2023" },
-          { name:"San Diego",     lat:32.7157, lng:-117.1611, blog:"", year:"2025" },
-          { name:"Madison",       lat:43.0731, lng:-89.4012,  blog:"", year:"2025, 2026" },
-          { name:"Chicago",       lat:41.8781, lng:-87.6298,  blog:"", year:"2023, 2025, 2026" },
-          { name:"Milwaukee",     lat:43.0389, lng:-87.9065,  blog:"", year:"2025" },
-          { name:"Duluth",        lat:46.7867, lng:-92.1005,  blog:"", year:"2025" },
-          { name:"Ashland",       lat:46.5927, lng:-90.8849,  blog:"", year:"2025" },
-          { name:"East Lansing",  lat:42.7368, lng:-84.4839,  blog:"", year:"2023" },
-	  { name:"Minneapolis",   lat:44.9799, lng:-93.2638,  blog:"", year:"2025" },
-	  { name:"Dubuque",       lat:42.5005, lng:-90.6645,  blog:"", year:"2026" },
-        ]
-      },
-    };
-
-    // ── STATS ──
-   function buildTravelStats() {
-        const continents = new Set();
-        document.querySelectorAll('.travel-card').forEach(card => {
-            if (card.dataset.continent) continents.add(card.dataset.continent);
-        });
-        let cities = 0;
-        Object.values(TRAVEL_DATA).forEach(c => { cities += c.cities.length; });
-        const countryCount = document.querySelectorAll('.travel-card').length;
-        document.getElementById('travel-stats').innerHTML = `
-            <div class="stat-pill"><span class="stat-number">${continents.size}</span><span class="stat-label">continents</span></div>
-            <div class="stat-pill"><span class="stat-number">${countryCount}</span><span class="stat-label">countries</span></div>
-            <div class="stat-pill"><span class="stat-number">${cities}</span><span class="stat-label">cities</span></div>
-        `;
-    }
-    buildTravelStats();
-
-    // ── MAP MODAL ──
-    let modalMap = null;
-
-    function openMapModal(countryKey) {
-        const data = TRAVEL_DATA[countryKey];
-        if (!data) return;
-        document.getElementById('modalTitle').textContent = data.name;
-        document.getElementById('modalSubtitle').textContent = data.subtitle || '';
-        document.getElementById('modalFlag').src = `https://flagcdn.com/w80/${data.flagCode}.png`;
-        document.getElementById('modalFlag').alt = data.name + ' flag';
-        document.getElementById('mapModalBackdrop').classList.add('open');
-        document.body.style.overflow = 'hidden';
-        setTimeout(() => { initMap(data, countryKey); }, 80);
-    }
-
-    const COUNTRY_ISO = {
-      albania:"Albania", argentina:"Argentina", austria:"Austria", belgium:"Belgium",
-      bosnia:"Bosnia and Herzegovina", bulgaria:"Bulgaria", canada:"Canada", china:"China",
-      czech:"Czech Republic", denmark:"Denmark", france:"France", germany:"Germany",
-      greece:"Greece", hungary:"Hungary", india:"India", italy:"Italy", jamaica:"Jamaica",
-      lithuania:"Lithuania", montenegro:"Montenegro", morocco:"Morocco",
-      northmacedonia:"North Macedonia", netherlands:"Netherlands", croatia:"Croatia",
-      thailand:"Thailand", peru:"Peru", portugal:"Portugal", scotland:"United Kingdom",
-      serbia:"Serbia", slovakia:"Slovakia", spain:"Spain", taiwan:"Taiwan",
-      usa:"United States of America", vietnam:"Vietnam",
-    };
-
-    const NEIGHBOURS = {
-      albania:        ["Greece","North Macedonia","Kosovo","Montenegro","Serbia"],
-      croatia:        ["Slovenia","Hungary","Serbia","Bosnia and Herzegovina","Montenegro"],
-      thailand:       ["Myanmar","Laos","Cambodia","Malaysia"],
-      argentina:      ["Chile","Bolivia","Paraguay","Brazil","Uruguay"],
-      austria:        ["Germany","Czech Republic","Slovakia","Hungary","Slovenia","Italy","Switzerland","Liechtenstein"],
-      belgium:        ["France","Netherlands","Germany","Luxembourg"],
-      bosnia:         ["Croatia","Serbia","Montenegro"],
-      bulgaria:       ["Romania","Serbia","North Macedonia","Greece","Turkey"],
-      canada:         ["United States of America"],
-      china:          ["Russia","Mongolia","Kazakhstan","Kyrgyzstan","Tajikistan","Afghanistan","Pakistan","India","Nepal","Bhutan","Myanmar","Laos","Vietnam","North Korea"],
-      czech:          ["Germany","Poland","Slovakia","Austria"],
-      denmark:        ["Germany"],
-      france:         ["Belgium","Luxembourg","Germany","Switzerland","Italy","Monaco","Spain","Andorra"],
-      germany:        ["Denmark","Poland","Czech Republic","Austria","Switzerland","France","Luxembourg","Belgium","Netherlands"],
-      greece:         ["Albania","North Macedonia","Bulgaria","Turkey"],
-      hungary:        ["Austria","Slovakia","Ukraine","Romania","Serbia","Croatia","Slovenia"],
-      india:          ["Pakistan","China","Nepal","Bhutan","Bangladesh","Myanmar"],
-      italy:          ["France","Switzerland","Austria","Slovenia","San Marino","Vatican"],
-      jamaica:        [],
-      lithuania:      ["Latvia","Belarus","Poland","Russia"],
-      montenegro:     ["Croatia","Bosnia and Herzegovina","Serbia","Kosovo","Albania"],
-      morocco:        ["Algeria","Spain"],
-      northmacedonia: ["Greece","Albania","Kosovo","Serbia","Bulgaria"],
-      netherlands:    ["Belgium","Germany"],
-      peru:           ["Ecuador","Colombia","Brazil","Bolivia","Chile"],
-      portugal:       ["Spain"],
-      scotland:       ["Ireland"],
-      serbia:         ["Hungary","Romania","Bulgaria","North Macedonia","Kosovo","Montenegro","Bosnia and Herzegovina","Croatia"],
-      slovakia:       ["Czech Republic","Poland","Ukraine","Hungary","Austria"],
-      spain:          ["Portugal","France","Andorra","Morocco"],
-      taiwan:         [],
-      usa:            ["Canada","Mexico"],
-      vietnam:        ["China","Laos","Cambodia"],
-    };
-
-    let worldGeoJSON = null;
-
-    function initMap(data, countryKey) {
-        if (modalMap) { modalMap.remove(); modalMap = null; }
-        modalMap = L.map('modal-map', { center: data.center, zoom: data.zoom, zoomControl: true, scrollWheelZoom: true });
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com">CARTO</a>',
-            subdomains: 'abcd', maxZoom: 19
-        }).addTo(modalMap);
-        const focalName = COUNTRY_ISO[countryKey] || '';
-        const neighbourNames = NEIGHBOURS[countryKey] || [];
-        const renderMap = (geojson) => {
-            L.geoJSON(geojson, {
-                filter: f => { const n = f.properties.ADMIN || f.properties.name || ''; return n === focalName || neighbourNames.includes(n); },
-                style: f => { const n = f.properties.ADMIN || f.properties.name || ''; return n === focalName ? { fillColor:'#40916C', fillOpacity:0.18, color:'#1B4332', weight:2 } : { fillColor:'#ffffff', fillOpacity:0.35, color:'#aaaaaa', weight:1 }; }
-            }).addTo(modalMap);
-            if (countryKey === 'usa' && data.visitedStates) loadUSStates(data.visitedStates);
-            addCityPins(data);
-        };
-        if (worldGeoJSON) { renderMap(worldGeoJSON); }
-        else { fetch('https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson').then(r=>r.json()).then(g=>{ worldGeoJSON=g; renderMap(g); }).catch(()=>addCityPins(data)); }
-    }
-
-    function addCityPins(data) {
-        const pinIcon = L.divIcon({ className:'', html:'<div class="city-pin"></div>', iconSize:[28,28], iconAnchor:[14,28], popupAnchor:[0,-30] });
-        data.cities.forEach(city => {
-            const marker = L.marker([city.lat, city.lng], { icon: pinIcon }).addTo(modalMap);
-            const linkHTML = (city.blog && city.blog !== '') ? `<a href="${city.blog}" class="city-popup-link" target="_blank" rel="noopener">Read the post →</a>` : '';
-            const yearHTML = city.year ? `<p class="city-popup-year">Visited ${city.year}</p>` : '';
-            marker.bindPopup(`<div class="city-popup"><p class="city-popup-name">${city.name}</p>${yearHTML}${linkHTML}</div>`, { maxWidth:240, closeButton:false });
-        });
-    }
-
-    function loadUSStates(visitedStates) {
-        fetch('https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json').then(r=>r.json()).then(geojson => {
-            const c = {"Alabama":"AL","Alaska":"AK","Arizona":"AZ","Arkansas":"AR","California":"CA","Colorado":"CO","Connecticut":"CT","Delaware":"DE","Florida":"FL","Georgia":"GA","Hawaii":"HI","Idaho":"ID","Illinois":"IL","Indiana":"IN","Iowa":"IA","Kansas":"KS","Kentucky":"KY","Louisiana":"LA","Maine":"ME","Maryland":"MD","Massachusetts":"MA","Michigan":"MI","Minnesota":"MN","Mississippi":"MS","Missouri":"MO","Montana":"MT","Nebraska":"NE","Nevada":"NV","New Hampshire":"NH","New Jersey":"NJ","New Mexico":"NM","New York":"NY","North Carolina":"NC","North Dakota":"ND","Ohio":"OH","Oklahoma":"OK","Oregon":"OR","Pennsylvania":"PA","Rhode Island":"RI","South Carolina":"SC","South Dakota":"SD","Tennessee":"TN","Texas":"TX","Utah":"UT","Vermont":"VT","Virginia":"VA","Washington":"WA","West Virginia":"WV","Wisconsin":"WI","Wyoming":"WY","District of Columbia":"DC"};
-            L.geoJSON(geojson, {
-                style: f => { const code = c[f.properties.name]||''; const v = visitedStates.includes(code); return { fillColor:v?'#40916C':'#e8e4df', fillOpacity:v?0.40:0.60, color:v?'#1B4332':'#aaa', weight:v?1.5:0.8 }; },
-                onEachFeature: (f,layer) => { const code = c[f.properties.name]||''; if(visitedStates.includes(code)) layer.bindTooltip(f.properties.name,{sticky:true,className:'state-tooltip'}); }
-            }).addTo(modalMap);
-        }).catch(err=>console.warn('US states failed:',err));
-    }
-
-    function closeMapModal() {
-        document.getElementById('mapModalBackdrop').classList.remove('open');
-        document.body.style.overflow = '';
-        if (modalMap) { modalMap.remove(); modalMap = null; }
-    }
-
-    document.querySelectorAll('.travel-card').forEach(card => {
-        card.addEventListener('click', e => {
-            e.preventDefault();
-            const country = card.dataset.country;
-            if (country && TRAVEL_DATA[country]) { openMapModal(country); }
-            else { const href = card.getAttribute('href'); if (href && href !== '#') window.location.href = href; }
-        });
-    });
-    document.getElementById('mapModalClose').addEventListener('click', closeMapModal);
-    document.getElementById('mapModalBackdrop').addEventListener('click', e => { if (e.target === document.getElementById('mapModalBackdrop')) closeMapModal(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMapModal(); closeWorldMap(); } });
-
-    // ── WORLD MAP ──
-    const VISITED_ADULT = new Set(["Albania","Argentina","Austria","Barbados","Belgium","Bosnia and Herzegovina","Bulgaria","Canada","China","Czechia","Denmark","France","Germany","Greece","Hong Kong","Hungary","India","Italy","Jamaica","Lithuania","Luxembourg","North Macedonia","Montenegro","Morocco","Netherlands","Saint Kitts and Nevis","Peru","Portugal","United Kingdom","Republic of Serbia","Singapore","Slovakia","Spain","Taiwan","Thailand","Croatia","United States of America","Holy See","Vietnam","Monaco","Saint-Barthélemy"]);
+    const VISITED_ADULT = new Set(["Albania","Argentina","Austria","Barbados","Belgium","Bosnia and Herzegovina","Bulgaria","Canada","China","Croatia","Czechia","Denmark","Estonia","Finland","France","Germany","Greece","Hong Kong","Hungary","Iceland","India","Italy","Jamaica","Lithuania","Luxembourg","Monaco","Montenegro","Morocco","Netherlands","North Macedonia","Peru","Portugal","Republic of Serbia","Saint Kitts and Nevis","Saint-Barthélemy","Singapore","Slovakia","South Korea","Spain","Taiwan","Thailand","Holy See","United Kingdom","United States of America","Vietnam"]);
     const VISITED_CHILD = new Set(["Australia","Mexico","Panama","Antigua and Barbuda","Fiji","Norway"]);
-    let worldMap = null;
-
-    function openWorldMap() {
-        document.getElementById('worldModalBackdrop').classList.add('open');
-        document.body.style.overflow = 'hidden';
-        document.getElementById('worldCountCount').textContent = `${VISITED_ADULT.size} countries · ${VISITED_CHILD.size} more countries visited as a child (under 12 years)`;
-        setTimeout(() => {
-            if (worldMap) { worldMap.remove(); worldMap = null; }
-            worldMap = L.map('world-map', { center:[20,10], zoom:2, zoomControl:true, scrollWheelZoom:true, minZoom:1 });
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'© OpenStreetMap © CARTO', subdomains:'abcd', maxZoom:10 }).addTo(worldMap);
-            const renderWorld = (geojson) => {
-                L.geoJSON(geojson, {
-                    style: f => { const n = f.properties.ADMIN||f.properties.name||''; if(VISITED_ADULT.has(n)) return {fillColor:'#40916C',fillOpacity:0.75,color:'#1B4332',weight:1.2}; if(VISITED_CHILD.has(n)) return {fillColor:'#B7E4C7',fillOpacity:0.65,color:'#40916C',weight:1.0}; return {fillColor:'#d6d0c8',fillOpacity:0.55,color:'#b0aba3',weight:0.4}; },
-                    onEachFeature: (f,layer) => { const n=f.properties.ADMIN||f.properties.name||''; const a=VISITED_ADULT.has(n); const ch=VISITED_CHILD.has(n); if(a||ch){ const label=ch?`${n} <em style="opacity:0.7;font-size:0.9em">(childhood)</em>`:n; layer.bindTooltip(label,{sticky:true,className:a?'country-tooltip':'country-tooltip-child'}); } else { layer.bindTooltip(n,{sticky:true,className:'country-tooltip-plain'}); } }
-                }).addTo(worldMap);
-            };
-            if (worldGeoJSON) { renderWorld(worldGeoJSON); }
-            else { fetch('https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson').then(r=>r.json()).then(g=>{worldGeoJSON=g;renderWorld(g);}).catch(err=>console.warn('World GeoJSON failed:',err)); }
-        }, 80);
-    }
-
-    function closeWorldMap() {
-        document.getElementById('worldModalBackdrop').classList.remove('open');
-        document.body.style.overflow = '';
-        if (worldMap) { worldMap.remove(); worldMap = null; }
-    }
-    document.getElementById('worldModalBackdrop').addEventListener('click', e => { if (e.target === document.getElementById('worldModalBackdrop')) closeWorldMap(); });
-
-    // ── FILTER ──
-    function filterTravel(continent, btn) {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelectorAll('.travel-card').forEach(card => {
-            card.style.display = (continent === 'all' || card.dataset.continent === continent) ? 'block' : 'none';
-        });
-    }
-    </script>
-
-</body>
-</html>"]);
     let worldMap = null;
 
     function openWorldMap() {
