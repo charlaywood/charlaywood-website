@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────────────────────
+#  charlaywood.com redirects
+#  "301!" forces the rule even though a file still exists at the
+#  old path, so retired pages never render.
+# ─────────────────────────────────────────────────────────────
+
+# ── Blog (unchanged) ──────────────────────────────────────────
+/ramble/*        https://blog.charlaywood.com/ramble/:splat        301
+/passions/*      https://blog.charlaywood.com/passions/:splat      301
+/travel/*        https://blog.charlaywood.com/travel/:splat        301
+/2024/*          https://blog.charlaywood.com/2024/:splat          301
+/2023/*          https://blog.charlaywood.com/2023/:splat          301
+/2022/*          https://blog.charlaywood.com/2022/:splat          301
+
+# ── Renamed sections ──────────────────────────────────────────
+/science.html      /research                                       301!
+/science           /research                                       301!
+/content.html      /content-creation                                301!
+/content           /content-creation                                301!
+/contact.html      /connect                                        301!
+/contact           /connect                                        301!
+/beyond.html       /life                                           301!
+/beyond            /life                                           301!
+
+# ── Merged into About ─────────────────────────────────────────
+/Education.html    /about#education                                301!
+/education.html    /about#education                                301!
+/education         /about#education                                301!
+/Work-history.html /about#path                                     301!
+/work-history.html /about#path                                     301!
+/work-history      /about#path                                     301!
+/achievements.html /about#recognition                              301!
+/achievements      /about#recognition                              301!
+
+# ── Sport retired; Football was its old name ──────────────────
+/sport.html        /life                                           301!
+/sport             /life                                           301!
+/football.html     /life                                           301!
+/football          /life                                           301!
+/sports            /life                                           301!
+
+# ── Retired /life/ duplicates ─────────────────────────────────
+/life/tango.html     /tango                                        301!
+/life/football.html  /life                                         301!
+/life/languages.html /languages                                    301!
+/life/*              /life                                         301!
